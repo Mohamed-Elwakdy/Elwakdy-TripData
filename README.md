@@ -3,8 +3,6 @@
 # Elwakdy-TripData
  
 
-<br>
-
 # Time range of datetime 
 
 <br>
@@ -79,7 +77,6 @@
             if Largest_date_dropoff_datetime < fdt1:
                 Largest_date_dropoff_datetime = fdt1
 
-
 ```
 
 <br>
@@ -99,15 +96,20 @@ print ('Number of rows= ' + str(i))
 <br>
 
 # The distinct values for each field
-# ----------------------------------
+
 
 # In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. I used a dictionary for each field to get the distinct values. Please run the python code to get the distinct values.
 
 # For an example of distint values of some fields explained below: 
 
-
-
 <br>
+
+{'1': 14456067, '2': 239160, '4': 22831, '5': 39889, '3': 17655, '6': 315, '8': 10, '0': 667, '210': 11, '28': 2, '7': 2, '9': 1, '65': 1, '128': 4}
+
+
+| Rate Code |  | MAX:14456067 , MIN: 1
+
+
 
 ```
 pickup_datetime = line[5].replace('-',':')

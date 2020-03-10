@@ -261,13 +261,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ![Image of screencapture](images/MinDroppoffLongitudeDropoff.jpg)
 
-
-
-
-
-# Plot Max Pickup Longitude/Droppoff against Min latitude/Droppoff on a map
-
-
+<br>
 
 ```
                 min_pickup_longitude = line[10]
@@ -322,11 +316,11 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 
 ```
+<br>
 
+# Question 6
 
-######################################################################################
-
-# The distinct values for each field
+<br>
 
 # In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. 
 
@@ -456,9 +450,46 @@ pickup_datetime = line[5].replace('-',':')
 
 ```
 
+<br>
+
+# Question 7
+
+<br>
+
+|   Field Name   | Max/Min Values |
+| ------------- | --------------------- |
+| trip_time_in_secs| MAX  10800, Min 0|
+|  trip_distance   |MAX 99.90, Min 0|
+|  Rate Code   |MAX 9 , Min 0|
 
 
-| trip_time_in_secs| MAX  10800|
-|  trip_distance   |MAX 99.90|
+```
 
+                min_rate_code = line[3]
+                max_rate_code = line[3]
+
+                min_rate_code = line[8]
+                max_rate_code = line[8]
+
+                min_trip_distance   = line[9]
+                max_trip_distance   = line[9]
+
+
+                if line[3] > max_rate_code:
+                        max_rate_code = line[3]
+                if line[3] < min_rate_code:
+                        min_rate_code = line[3]
+
+                if int(line[8]) > int(max_trip_time_in_secs):
+                        max_trip_time_in_secs  = line[8]
+                if int(line[8]) < int(min_trip_time_in_secs):
+                        min_trip_time_in_secs  = line[8]
+
+                if line[9] > max_trip_distance :
+                        max_trip_distance = line[9]
+                if line[9] < min_trip_distance :
+                        min_trip_distance = line[9]
+
+
+```
 

@@ -98,7 +98,9 @@ print ('Number of rows= ' + str(i))
 # The distinct values for each field
 
 
-# In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. I used a dictionary for each field to get the distinct values. Please run the python code to get the distinct values.
+# In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. 
+
+# I used a dictionary to get the total number of values for each field. Please run the python code to get the distinct values of other fields. 
 
 # For an example of distint values of some fields explained below: 
 
@@ -106,13 +108,10 @@ print ('Number of rows= ' + str(i))
 
 |   Field Name   | Distinct Values |
 | ------------- | --------------------- |
-|   Rate Code   | MAX: 9 |
-| passenger_count | MAX:  10471701|
-| trip_time_in_secs| MAX  10800|
-|  trip_distance   |MAX 99.90|
+|   Rate Code   | MAX: 14456067, MIN:  1|
+| passenger_count | MAX:  10471701, MIN: |
 
-
-
+<br>
 
 
 ```
@@ -281,5 +280,8 @@ pickup_datetime = line[5].replace('-',':')
 ```
 
 
+
+| trip_time_in_secs| MAX  10800|
+|  trip_distance   |MAX 99.90|
 
 

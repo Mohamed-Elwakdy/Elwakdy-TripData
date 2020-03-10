@@ -107,7 +107,7 @@ medallion, hack_license, vendor_id, rate_code, store_and_fwd_flag, pickup_dateti
 trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude.
 
 
-|    Field Nam  | Description |
+|    Field Name  | Description |
 | ------------- | --------------------- |
 |   Medallion   |A transferable permit in the United States allowing a taxicab driver to operate|
 | Hack License | Hack license is known as a New York City Taxi Operators License. The license allows the holder / driver to operate a Yellow Medallion Taxicab in the Five Boroughs of the City of New York|
@@ -124,8 +124,72 @@ trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_lat
 |   Dropoff Longitude  |The longitude of the point where the taximeter was disengaged|
 | Dropoff Latitude |The latitude of the point where the taximeter was disengaged|
 
+<br>
 
+# Question 3
 
+<br>
+
+# Some sample data for each field
+
+# Sample 1
+
+|    Sample Data  | Description |
+| ------------- | --------------------- |
+| Medallion | DFD2202EE08F7A8DC9A57B02ACB81FE2|
+|Hack License |51EE87E3205C985EF8431D850C786310|
+|Vendor Id |CMT|
+|Rate Code |1|
+|Store and Fwd Flag |N|
+|Pickup Datetime |2013-01-07 23:25:03|
+|Dropoff Datetime | 2013-01-07 23:34:24|
+|Passenger Count |1|
+|Trip Time in Secs| 560|
+|Trip Distance |2.10|
+|Pickup Longitude| -73.97625|
+|Pickup Latitude  |40.748528|
+|Dropoff Longitude |-74.002586|
+|Dropoff Latitude |40.747868|
+
+<br>
+
+|    Sample Data  | Description |
+| ------------- | --------------------- |
+|Medallion | 2D4B95E2FA7B2E85118EC5CA4570FA58|
+|Hack License |CD2F522EEE1FF5F5A8D8B679E23576B3|
+|Vendor Id |CMT|
+|Rate Code |1|
+|Store and Fwd Flag |N|
+|Pickup Datetime |2013-01-07 15:33:28|
+|Dropoff Datetime | 2013-01-07 15:49:26|
+|Passenger Count |2|
+|Trip Time in Secs| 957|
+|Trip Distance |2.50|
+|Pickup Longitude| -73.977936|
+|Pickup Latitude  |40.786983|
+|Dropoff Longitude |-73.952919|
+|Dropoff Latitude |40.80637|
+
+<br>
+
+|    Sample Data  | Description |
+| ------------- | --------------------- |
+|Medallion | 3349F919AA8AE5DC9C50A3773EA45BD8|
+|Hack License |7CE849FEF67514F080AF80D990F7EF7F|
+|Vendor Id |CMT|
+|Rate Code |1|
+|Store and Fwd Flag |N|
+|Pickup Datetime |2013-01-10 15:42:29|
+|Dropoff Datetime |2013-01-10 16:04:02|
+|Passenger Count |1|
+|Trip Time in Secs|1293|
+|Trip Distance |3.20|
+|Pickup Longitude|-73.994911|
+|Pickup Latitude  |40.723221|
+|Dropoff Longitude |-73.971558|
+|Dropoff Latitude |40.761612|
+
+<br>
 
 # The distinct values for each field
 

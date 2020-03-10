@@ -247,7 +247,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 # Plot Max Pickup Longitude/Pickup against Pickup latitude/Pickup on a map
 
-![Image of screencapture](images/MaxPickup LongitudeAgainstPickupLatitude)
+![Image of screencapture](images/MaxPickupLongitudeAndLatitude.jpg)
 
 
 

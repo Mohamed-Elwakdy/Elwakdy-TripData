@@ -101,7 +101,11 @@ print ('Number of rows= ' + str(i))
 # The distinct values for each field
 # ----------------------------------
 
-# In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs,trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude and dropoff_latitude are getting on. I used a dictionary for each field to get the distinct values. Please run the python code to get the distinct values.
+# In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. I used a dictionary for each field to get the distinct values. Please run the python code to get the distinct values.
+
+# For an example of distint values of some fields explained below: 
+
+
 
 <br>
 

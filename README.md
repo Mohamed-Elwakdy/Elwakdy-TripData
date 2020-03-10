@@ -158,7 +158,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 |Dropoff Latitude |40.747868|
 
 <br>
-# Sample 1
+# Sample 2
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |
@@ -178,7 +178,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 |Dropoff Latitude |40.80637|
 
 <br>
-# Sample 1
+# Sample 3
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |
@@ -203,6 +203,12 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 <br>
 
+# The geographic range of my data (min/max - X/Y)
+
+
+
+
+
 |    File Name  | Data Type |
 | ------------- | --------------------- |
 |Medallion | varchar(32)|
@@ -226,9 +232,78 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 <br> 
 
+|  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
+| ------------- | --------------------- |
+|  Max Pickup Longitude   | -98.866356|
+| Min Pickup Longitude| 80.842125 |
+
+|  Max Pickup Latitude   | 82.514046|
+| Min Pickup latitude| -39.762348 |
+
+|  Max Droppoff Longitude    |-98.75|
+| Min Droppoff Longitude | 84.315735 |
+
+|  Max Droppoff Latitude   | 83.516693|
+| Min Droppoff latitude| -0.56333297 |
+
+```
+                min_pickup_longitude = line[10]
+                min_pickup_longitude = min_pickup_longitude                                                                                                                                   
+                max_pickup_longitude = line[10]
+                max_pickup_longitude = max_pickup_longitude 
+
+                min_pickup_latitude = line[11]
+                min_pickup_latitude = min_pickup_latitude 
+                max_pickup_latitude = line[11]
+                max_pickup_latitude =max_pickup_latitude 
+
+                min_dropoff_longitude = line[12]
+                min_dropoff_longitude = min_dropoff_longitude 
+                max_dropoff_longitude = line[12]
+                max_dropoff_longitude = max_dropoff_longitude 
+
+                min_dropoff_latitude = line[13]
+                min_dropoff_latitude = min_dropoff_latitude
+                max_dropoff_latitude = line[13]
+                max_dropoff_latitude = max_dropoff_latitude 
+                
+
+                if line[10] != "" and float(line[10]) < 100 and float(line[10])>-99:
+
+                        if float(line[10]) < float(max_pickup_longitude):
+                            max_pickup_longitude = line[10]
+                        if float(line[10]) > float(min_pickup_longitude):
+                            min_pickup_longitude = line[10]
+
+                 if line[11] != "" and float(line[11]) < 100 and float(line[11])>-99:
+
+                        if float(line[11]) > float(max_pickup_latitude):
+                            max_pickup_latitude = line[11]
+                        if float(line[11]) < float(min_pickup_latitude):
+                            min_pickup_latitude = line[11]
+
+                 if line[12] != "" and float(line[12]) < 100 and float(line[12])>-99:
+
+                        if float(line[12]) < float(max_dropoff_longitude):
+                            max_dropoff_longitude = line[12]
+                        if float(line[12]) > float(min_dropoff_longitude):
+                            min_dropoff_longitude = line[12]
+
+                 if line[13] != "" and float(line[13]) < 100 and float(line[13])>-99:
+
+                        if float(line[13]) > float(max_dropoff_latitude):
+                            max_dropoff_latitude = line[13]
+                        if float(line[13]) < float(min_dropoff_latitude):
+                            min_dropoff_latitude = line[13]
+
+
+
+```
+
+
+######################################################################################
 
 # The distinct values for each field
-
 
 # In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. 
 

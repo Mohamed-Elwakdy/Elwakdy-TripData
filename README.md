@@ -509,7 +509,6 @@ pickup_datetime = line[5].replace('-',':')
 | 18| 1.7012934622800804|
 | 23| 1.7540406583168833|
 | 11| 1.6736848030241087|
-
 | 12| 1.6811567347356455|
 | 13| 1.688445186465027|
 | 09| 1.6280298565816753|
@@ -550,7 +549,7 @@ if Hour_datetime in d.keys():
 
 ```
 
-![Image of screencapture](images/Pickup AVG.jpg)
+![Image of screencapture](images/PickupAVG.jpg)
 
 
 

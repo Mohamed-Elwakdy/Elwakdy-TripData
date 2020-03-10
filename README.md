@@ -124,6 +124,12 @@ trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_lat
 |   Dropoff Longitude  |The longitude of the point where the taximeter was disengaged|
 | Dropoff Latitude |The latitude of the point where the taximeter was disengaged|
 
+```
+with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
+    d_reader = csv.DictReader(f)
+    headers = d_reader.fieldnames
+```
+
 <br>
 
 # Question 3
@@ -152,6 +158,7 @@ trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_lat
 |Dropoff Latitude |40.747868|
 
 <br>
+# Sample 1
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |
@@ -171,6 +178,7 @@ trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_lat
 |Dropoff Latitude |40.80637|
 
 <br>
+# Sample 1
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |
@@ -190,6 +198,34 @@ trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_lat
 |Dropoff Latitude |40.761612|
 
 <br>
+
+# Question 4
+
+<br>
+
+|    File Name  | Data Type |
+| ------------- | --------------------- |
+|Medallion | varchar(32)|
+|Hack License |varchar(32)|
+|Vendor Id |text|
+|Rate Code |int(3)|
+|Store and Fwd Flag |varchar(1)|
+|Pickup Datetime |datetime|
+|Dropoff Datetime |datetime|
+|Passenger Count |int(3)|
+|Trip Time in Secs|int(18)|
+|Trip Distance |decimal (5.3)|
+|Pickup Longitude|decimal (9.7)|
+|Pickup Latitude  |decimal (9.7)|
+|Dropoff Longitude |decimal (9.7)|
+|Dropoff Latitude |decimal (9.7)|
+
+<br>
+
+# Question 5
+
+<br> 
+
 
 # The distinct values for each field
 

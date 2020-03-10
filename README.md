@@ -549,7 +549,7 @@ if Hour_datetime in d.keys():
 
 ```
 
-![Image of screencapture](images/PickupAVG.jpg)
+![Image of screencapture](AVGPassengersPickup.jpg)
 
 
 

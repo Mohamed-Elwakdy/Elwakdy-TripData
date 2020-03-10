@@ -99,6 +99,34 @@ print ('Number of rows= ' + str(i))
 
 <br>
 
+# Question: 2
+
+<br>
+
+medallion, hack_license, vendor_id, rate_code, store_and_fwd_flag, pickup_datetime, dropoff_datetime, passenger_count, trip_time_in_secs, 
+trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude.
+
+
+|    Field Nam  | Description |
+| ------------- | --------------------- |
+|   Medallion   |A transferable permit in the United States allowing a taxicab driver to operate|
+| Hack License | Hack license is known as a New York City Taxi Operators License. The license allows the holder / driver to operate a Yellow Medallion Taxicab in the Five Boroughs of the City of New York|
+|   Vendor Id  | The Vendor ID is a ten-digit identifier issued by New York State when the vendor is registered on the Statewide Vendor File|
+| Rate Code |The final rate code in effect at the end of the trip|
+| Store and Fwd Flag  | Store and fwd flag indicates whether the trip record was held in vehicle memory before sending to the vendor |
+| Pickup Datetime |The date and time to pick up the passenger |
+|   Dropoff Datetime |The date and time to drop off the passenger |
+| Passenger Count |The number of passengers in the vehicle|
+|  Trip Time in Secs  |The trip time per seconds  |
+| Trip Distance |The trip distance is the difference between the pickup time and drop off time of the passenger(s)|
+|   Pickup Longitude  |The longitude of the point where the taximeter was engaged|
+|  Pickup Latitude |The latitude of the point where the taximeter was engaged|
+|   Dropoff Longitude  |The longitude of the point where the taximeter was disengaged|
+| Dropoff Latitude |The latitude of the point where the taximeter was disengaged|
+
+
+
+
 # The distinct values for each field
 
 

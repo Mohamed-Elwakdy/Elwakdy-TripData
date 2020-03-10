@@ -249,17 +249,17 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ![Image of screencapture](images/MaxPickupLongitudeAgainsPickuplatitude.jpg)
 
-<br>
-
 # Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map 
 
 ![Image of screencapture](images/MinPickupLongitudePickup.jpg)
 
-<br>
-
 # Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
 
 ![Image of screencapture](images/MaxDroppoffLongitudeAgainsDroppofflatitude.jpg)
+
+# Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
+
+![Image of screencapture](images/MinDroppoffLongitudeDropoff.jpg)
 
 
 

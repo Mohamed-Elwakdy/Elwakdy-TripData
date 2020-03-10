@@ -234,17 +234,16 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 |  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
 | ------------- | --------------------- |
-|  Max Pickup Longitude   | -98.866356|
-| Min Pickup Longitude| 80.842125 |
+| Max Pickup Longitude/Pickup  | -98.866356|
+| Min Pickup Longitude/Pickup| 80.842125 |
+|  Max Pickup Latitude/Pickup   | 82.514046|
+| Min Pickup latitude/Pickup| -39.762348 |
+|  Max Droppoff Longitude/Droppoff    |-98.75|
+| Min Droppoff Longitude/Droppoff | 84.315735 |
+|  Max Droppoff Latitude/Droppoff   | 83.516693|
+| Min Droppoff latitude/Droppoff| -0.56333297 |
 
-|  Max Pickup Latitude   | 82.514046|
-| Min Pickup latitude| -39.762348 |
-
-|  Max Droppoff Longitude    |-98.75|
-| Min Droppoff Longitude | 84.315735 |
-
-|  Max Droppoff Latitude   | 83.516693|
-| Min Droppoff latitude| -0.56333297 |
+# Plot Max Pickup Longitude/Pickup against Pickup latitude/Pickup on a map
 
 ```
                 min_pickup_longitude = line[10]

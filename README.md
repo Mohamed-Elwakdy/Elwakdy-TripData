@@ -243,7 +243,13 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 |  Max Droppoff Latitude/Droppoff   | 83.516693|
 | Min Droppoff latitude/Droppoff| -0.56333297 |
 
+<br>
+
 # Plot Max Pickup Longitude/Pickup against Pickup latitude/Pickup on a map
+
+![Image of screencapture](images/Max Pickup Longitude - Pickup against Pickup latitude - Pickup.jpg)
+
+
 
 ```
                 min_pickup_longitude = line[10]

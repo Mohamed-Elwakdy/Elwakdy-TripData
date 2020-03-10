@@ -7,6 +7,10 @@
 
 <br>
 
+# Question 1:
+
+<br>
+
 # Smallest_date_pickup_datetime =  2013-01-01 00:00:00
 
 # Largest_date_pickup_datetime =  2013-01-31 23:59:59
@@ -222,59 +226,6 @@ pickup_datetime = line[5].replace('-',':')
 
         if 'trip_distance' in mhist7:
              del mhist7['trip_distance']
-
-        ###print (d)#hour count
-
-        pickup_longitude = line [10]
-        pickup_longitude = pickup_longitude [0:6]
-
-        if pickup_longitude in mhist8.keys():
-             mhist8[pickup_longitude] += 1
-        else:
-             mhist8[pickup_longitude] = 1
-
-        if 'pickup' in mhist8:
-             del mhist8['pickup']
-
-        ###
-
-        pickup_latitude = line [11]
-        pickup_latitude = pickup_latitude [0:6]
-
-        if pickup_longitude in mhist9.keys():
-             mhist9[pickup_longitude] += 1
-        else:
-             mhist9[pickup_longitude] = 1
-
-        if 'pickup' in mhist9:
-             del mhist9['pickup']
-
-        ###
-
-        dropoff_longitude = line [12]
-        dropoff_longitude = dropoff_longitude [0:6]
-
-        if dropoff_longitude in mhist10.keys():
-             mhist10[dropoff_longitude] += 1
-        else:
-             mhist10[dropoff_longitude] = 1
-
-        if 'dropof' in mhist10:
-             del mhist10['dropof']
-
-        ###
-
-        dropoff_latitude = line [13]
-        dropoff_latitude = dropoff_latitude [0:6]
-
-        if dropoff_latitude in mhist11.keys():
-             mhist11[dropoff_latitude] += 1
-        else:
-             mhist11[dropoff_latitude] = 1
-
-        if 'dropof' in mhist11:
-             del mhist11['dropof']
-
 
 
 ```

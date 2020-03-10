@@ -249,6 +249,8 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ![Image of screencapture](images/MaxPickupLongitudeAgainsPickuplatitude.jpg)
 
+<br>
+
 
 ![Image of screencapture](images/MinPickup LongitudeAgainstPickupLatitude.jpg)
 

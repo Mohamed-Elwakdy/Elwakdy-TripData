@@ -3,23 +3,26 @@
 # Elwakdy-TripData
  
 
-### Time range of datetime 
-
 <br>
 
 # Question 1:
 
 <br>
 
-# Smallest_date_pickup_datetime =  2013-01-01 00:00:00
+### Time range of datetime 
 
-# Largest_date_pickup_datetime =  2013-01-31 23:59:59
+### Smallest_date_pickup_datetime =  2013-01-01 00:00:00
 
-# Smallest_date_dropoff_datetime =  2013-01-01 00:00:36
+### Largest_date_pickup_datetime =  2013-01-31 23:59:59
 
-# Largest_date_dropoff_datetime =  2013-02-01 10:33:08
+### Smallest_date_dropoff_datetime =  2013-01-01 00:00:36
+
+### Largest_date_dropoff_datetime =  2013-02-01 10:33:08
 
 <br>
+
+## Here, I will chech all the datatime out before I start work on datatime in "Packup Datetime" and "Dropoff Datetime". 
+## This means that I match format below of %Y_%m_%d %H:%M:%S and see if there is any invalid datetime. 
 
 ```
 

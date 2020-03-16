@@ -599,4 +599,17 @@ pickup_datetime = line[5].replace('-',':')
 ![Image of screencapture](images/Droppoff.JPG)
 
 
+<br>
+
+# Question 9
+
+<br>
+
+### The average of passengers per hour - Each Thousands row (Puckup)
+![Image of screencapture](images/PickupAVGThousands.JPG)
+
+### The average of passengers per hour - Each Thousands row (Droopoff)
+![Image of screencapture](images/DroppoffAVGThousands.JPG)
+
+
 

@@ -594,7 +594,7 @@ pickup_datetime = line[5].replace('-',':')
 ```
 
 ![Image of screencapture](images/AVGPassengersPickup.JPG)
-![Image of screencapture](images/DroppoffAVG.JPG)
+![Image of screencapture](images/Droppoff.JPG)
 
 
 

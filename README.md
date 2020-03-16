@@ -237,19 +237,26 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 <br> 
 
-# The geographic range of my data (min/max - X/Y)
+### The geographic range of my data (min/max - X/Y)
+
+### Here, I take the logitude and latitude points into consideration into a big boundary box and then calculate the max and min values.
 
 
 |  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
 | ------------- | --------------------- |
-| Max Pickup Longitude/Pickup  | -98.866356|
-| Min Pickup Longitude/Pickup| 80.842125 |
+| Max Pickup Longitude/Pickup  | -179.36124|
+| Min Pickup Longitude/Pickup| 112.40418 |
 |  Max Pickup Latitude/Pickup   | 82.514046|
-| Min Pickup latitude/Pickup| -39.762348 |
-|  Max Droppoff Longitude/Droppoff    |-98.75|
-| Min Droppoff Longitude/Droppoff | 84.315735 |
-|  Max Droppoff Latitude/Droppoff   | 83.516693|
-| Min Droppoff latitude/Droppoff| -0.56333297 |
+| Min Packup latitude/Pickup| -39.762348 |
+
+
+<br>
+# Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
+![Image of screencapture](images/New - Max Long - Min Latitude pick up.jpg)
+
+
+
+
 
 <br>
 

@@ -592,8 +592,10 @@ pickup_datetime = line[5].replace('-',':')
 
 
 ```
-
+### The average of passengers per hour (Puckup)
 ![Image of screencapture](images/AVGPassengersPickup.JPG)
+
+### The average of passengers per hour (Droopoff)
 ![Image of screencapture](images/Droppoff.JPG)
 
 

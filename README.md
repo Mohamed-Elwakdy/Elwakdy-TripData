@@ -146,7 +146,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 
 
-|    Sample Data  | Description |
+|   Field Name | Description |
 | ------------- | --------------------- |
 | medallion | DFD2202EE08F7A8DC9A57B02ACB81FE2|
 |hack_license |51EE87E3205C985EF8431D850C786310|
@@ -167,7 +167,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ### Sample 2
 
-|    Sample Data  | Description |
+|    Field Name  | Description |
 | ------------- | --------------------- |
 |medallion | 2D4B95E2FA7B2E85118EC5CA4570FA58|
 |hack_license |CD2F522EEE1FF5F5A8D8B679E23576B3|
@@ -188,7 +188,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ### Sample 3
 
-|    Sample Data  | Description |
+|    Field Name  | Description |
 | ------------- | --------------------- |
 |medallion | 3349F919AA8AE5DC9C50A3773EA45BD8|
 |hack_license|7CE849FEF67514F080AF80D990F7EF7F|
@@ -211,34 +211,35 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 <br>
 
-# The geographic range of my data (min/max - X/Y)
+### MySQL data types that I need to store each of the fields are:
 
 
 
-
-
-|    File Name  | Data Type |
+|    Field Name  | Data Type |
 | ------------- | --------------------- |
-|Medallion | varchar(32)|
-|Hack License |varchar(32)|
-|Vendor Id |text|
-|Rate Code |int(3)|
-|Store and Fwd Flag |varchar(1)|
-|Pickup Datetime |datetime|
-|Dropoff Datetime |datetime|
-|Passenger Count |int(3)|
-|Trip Time in Secs|int(18)|
-|Trip Distance |decimal (5.3)|
-|Pickup Longitude|decimal (9.7)|
-|Pickup Latitude  |decimal (9.7)|
-|Dropoff Longitude |decimal (9.7)|
-|Dropoff Latitude |decimal (9.7)|
+|medallion | varchar(32)|
+|hack_license |varchar(32)|
+|vendor_id|text|
+|rate_code |int(3)|
+|store_and_fwd_flag |varchar(1)|
+|pickup_datetime |datetime|
+|dropoff_datetime |datetime|
+|passenger_count |int(3)|
+|trip_time_in_secs|int(18)|
+|trip_distance|decimal (5.3)|
+|pickup_longitude|decimal (9.7)|
+|pickup_latitude  |decimal (9.7)|
+|dropoff_longitude |decimal (9.7)|
+|dropoff_latitude |decimal (9.7)|
 
 <br>
 
 # Question 5
 
 <br> 
+
+# The geographic range of my data (min/max - X/Y)
+
 
 |  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
 | ------------- | --------------------- |

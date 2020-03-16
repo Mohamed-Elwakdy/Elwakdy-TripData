@@ -289,55 +289,35 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 ###  INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
 ### -----------------------------------------------------------------------------------------------------
 
+###  The number of points inside the bounding box for 14776614 pickup longitude is really a big number compared to the number of points outside the bounding box:
+
 ```
-                min_pickup_longitude = line[10]
-                min_pickup_longitude = min_pickup_longitude                                                                                                                                   
-                max_pickup_longitude = line[10]
-                max_pickup_longitude = max_pickup_longitude 
-
-                min_pickup_latitude = line[11]
-                min_pickup_latitude = min_pickup_latitude 
-                max_pickup_latitude = line[11]
-                max_pickup_latitude =max_pickup_latitude 
-
-                min_dropoff_longitude = line[12]
-                min_dropoff_longitude = min_dropoff_longitude 
-                max_dropoff_longitude = line[12]
-                max_dropoff_longitude = max_dropoff_longitude 
-
-                min_dropoff_latitude = line[13]
-                min_dropoff_latitude = min_dropoff_latitude
-                max_dropoff_latitude = line[13]
-                max_dropoff_latitude = max_dropoff_latitude 
+    
                 
+            if line[10] != "" and float(line[10]) >= float (-74.257159) and float(line[10])<= float(-73.699215):
+                        if float(line[10]) < float(max_pickup_longitude_bounding):
+                            max_pickup_longitude_bounding = line[10]
+                        if float(line[10]) > float(min_pickup_longitude_bounding):
+                            min_pickup_longitude_bounding = line[10]
 
-                if line[10] != "" and float(line[10]) < 100 and float(line[10])>-99:
+                        line_text = line[10]
+                        line_text = line_text [0:6]
+                        
+                        if line_text in mhist_inside_Boundingbox.keys():
 
-                        if float(line[10]) < float(max_pickup_longitude):
-                            max_pickup_longitude = line[10]
-                        if float(line[10]) > float(min_pickup_longitude):
-                            min_pickup_longitude = line[10]
+                               mhist_inside_Boundingbox[line_text] += 1
+                        else:
+                               mhist_inside_Boundingbox[line_text] = 1    
 
-                 if line[11] != "" and float(line[11]) < 100 and float(line[11])>-99:
 
-                        if float(line[11]) > float(max_pickup_latitude):
-                            max_pickup_latitude = line[11]
-                        if float(line[11]) < float(min_pickup_latitude):
-                            min_pickup_latitude = line[11]
-
-                 if line[12] != "" and float(line[12]) < 100 and float(line[12])>-99:
-
-                        if float(line[12]) < float(max_dropoff_longitude):
-                            max_dropoff_longitude = line[12]
-                        if float(line[12]) > float(min_dropoff_longitude):
-                            min_dropoff_longitude = line[12]
-
-                 if line[13] != "" and float(line[13]) < 100 and float(line[13])>-99:
-
-                        if float(line[13]) > float(max_dropoff_latitude):
-                            max_dropoff_latitude = line[13]
-                        if float(line[13]) < float(min_dropoff_latitude):
-                            min_dropoff_latitude = line[13]
+     #{'-74.00': 1581119, '-73.97': 2576599, '-73.96': 1549802, '-73.99': 2503233, '-73.98': 3567237, '-74.01': 293161,
+     # '-73.78': 159632, '-73.95': 1322448, '-73.86': 124359, '-73.94': 360437, '-73.90': 14566, '-73.87': 147130, '-73.79': 29227,
+     # '-73.92': 53989, '-73.93': 76041, '-73.91': 35051, '-73.77': 43243, '-73.81': 2331, '-73.88': 21175, '-73.89': 9998,
+     # '-73.80': 6042, '-74.10': 189, '-73.85': 3696, '-73.84': 4964, '-74.15': 520, '-74.16': 646, '-73.74': 138, '-74': 1524,
+     # '-73.83': 2809, '-73.82': 1783, '-74.04': 1374, '-74.03': 3190, '-74.02': 2449, '-73.73': 228, '-74.09': 216, '-74.07': 446,
+     # '-74.05': 566, '-74.08': 235, '-74.06': 591, '-73.70': 168, '-73.72': 248, '-74.12': 138, '-74.14': 146, '-74.23': 53,
+     # '-73.75': 132, '-73.76': 226, '-74.18': 356, '-73.71': 114, '-74.17': 724, '-74.11': 183, '-74.20': 78, '-74.25': 42,
+     # '-74.22': 96, '-74.19': 103, '-74.13': 118, '-74.21': 145, '-74.24': 37, '-73.69': 15}       
 
 
 

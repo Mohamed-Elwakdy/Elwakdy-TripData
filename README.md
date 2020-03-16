@@ -142,10 +142,9 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ### Some sample data for each field
 
-### Sample 1
+#### Sample 1
 
-### medallion, hack_license, vendor_id, rate_code, store_and_fwd_flag, pickup_datetime, dropoff_datetime, passenger_count, trip_time_in_secs, 
-### trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude.
+
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |

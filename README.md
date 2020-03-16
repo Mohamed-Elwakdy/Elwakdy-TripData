@@ -248,10 +248,12 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 | Min Pickup Longitude/Pickup| 112.40418 |
 |  Max Pickup Latitude/Pickup   | 82.514046|
 | Min Packup latitude/Pickup| -39.762348 |
-
+| Max Dropoff Longitude/Dropoff  | |
+| Min Dropoff Longitude/Dropoff|  |
+|  Max Dropoff Latitude/Dropoff   | |
+| Min Dropoff latitude/Dropoff|  |
 
 <br>
-
 
 ### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
 ### 
@@ -260,30 +262,32 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 ### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map
 ![Image of screencapture](images/New-MinLong-MaxLatitudepickup.jpg)
 
+### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
 
+### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
 
+```
+if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line[11] != "" and float(line[11]) <= 90 and float(line[11])>=-90:
 
+                     if float(line[10]) < float(max_pickup_longitude_big_bounday):
+                            max_pickup_longitude_big_bounday = line[10]
+                     if float(line[10]) > float(min_pickup_longitude_big_bounday):
+                            min_pickup_longitude_big_bounday = line[10]
+        
 
+                     if float(line[11]) > float(max_pickup_latitude_big_bounday):
+                            max_pickup_latitude_big_bounday = line[11]
+                     if float(line[11]) < float(min_pickup_latitude_big_bounday):
+                            min_pickup_latitude_big_bounday = line[11]
 
-<br>
-
-# Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
-
-![Image of screencapture](images/MaxPickupLongitudeAgainsPickuplatitude.jpg)
-
-# Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map 
-
-![Image of screencapture](images/MinPickupLongitudePickup.jpg)
-
-# Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
-
-![Image of screencapture](images/MaxDroppoffLongitudeAgainsDroppofflatitude.jpg)
-
-# Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
-
-![Image of screencapture](images/MinDroppoffLongitudeDropoff.jpg)
+```
 
 <br>
+
+### I take all points into the bounding box based on the longitude and litiude of NYC with computing the max and min values.
+
+###  INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
+### -----------------------------------------------------------------------------------------------------
 
 ```
                 min_pickup_longitude = line[10]

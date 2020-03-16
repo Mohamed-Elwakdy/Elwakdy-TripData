@@ -107,8 +107,7 @@ print ('Number of rows= ' + str(i))
 
 ### The field names are: 
 
-### medallion, hack_license, vendor_id, rate_code, store_and_fwd_flag, pickup_datetime, dropoff_datetime, passenger_count, trip_time_in_secs, 
-### trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude.
+### medallion, hack_license, vendor_id, rate_code, store_and_fwd_flag, pickup_datetime, dropoff_datetime, passenger_count, trip_time_in_secs, trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude.
 
 
 |    Field Name  | Description |

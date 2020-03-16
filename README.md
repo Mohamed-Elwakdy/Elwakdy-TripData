@@ -142,7 +142,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ### Some sample data for each field
 
-#### Sample 1
+### Sample 1
 
 
 
@@ -164,6 +164,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 |dropoff_latitude |40.747868|
 
 <br>
+
 ### Sample 2
 
 |    Sample Data  | Description |
@@ -184,6 +185,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 |dropoff_latitude |40.80637|
 
 <br>
+
 ### Sample 3
 
 |    Sample Data  | Description |

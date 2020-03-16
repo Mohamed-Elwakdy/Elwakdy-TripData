@@ -286,13 +286,22 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 
 ### I take all points into the bounding box based on the longitude and litiude of NYC with computing the max and min values.
 
-###  INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
-### -----------------------------------------------------------------------------------------------------
+####  INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
+#### -----------------------------------------------------------------------------------------------------
 
 ###  The number of points inside the bounding box for 14776614 pickup longitude is really a big number compared to the number of points outside the bounding box:
 
 ```
     
+                
+                #{'-74.00': 1581119, '-73.97': 2576599, '-73.96': 1549802, '-73.99': 2503233, '-73.98': 3567237, '-74.01': 293161,
+                # '-73.78': 159632, '-73.95': 1322448, '-73.86': 124359, '-73.94': 360437, '-73.90': 14566, '-73.87': 147130, '-73.79': 29227,
+                # '-73.92': 53989, '-73.93': 76041, '-73.91': 35051, '-73.77': 43243, '-73.81': 2331, '-73.88': 21175, '-73.89': 9998,
+                # '-73.80': 6042, '-74.10': 189, '-73.85': 3696, '-73.84': 4964, '-74.15': 520, '-74.16': 646, '-73.74': 138, '-74': 1524,
+                # '-73.83': 2809, '-73.82': 1783, '-74.04': 1374, '-74.03': 3190, '-74.02': 2449, '-73.73': 228, '-74.09': 216, '-74.07': 446,
+                # '-74.05': 566, '-74.08': 235, '-74.06': 591, '-73.70': 168, '-73.72': 248, '-74.12': 138, '-74.14': 146, '-74.23': 53,
+                # '-73.75': 132, '-73.76': 226, '-74.18': 356, '-73.71': 114, '-74.17': 724, '-74.11': 183, '-74.20': 78, '-74.25': 42,
+                # '-74.22': 96, '-74.19': 103, '-74.13': 118, '-74.21': 145, '-74.24': 37, '-73.69': 15}
                 
             if line[10] != "" and float(line[10]) >= float (-74.257159) and float(line[10])<= float(-73.699215):
                         if float(line[10]) < float(max_pickup_longitude_bounding):
@@ -307,38 +316,118 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 
                                mhist_inside_Boundingbox[line_text] += 1
                         else:
-                               mhist_inside_Boundingbox[line_text] = 1    
-
-
-     #{'-74.00': 1581119, '-73.97': 2576599, '-73.96': 1549802, '-73.99': 2503233, '-73.98': 3567237, '-74.01': 293161,
-     # '-73.78': 159632, '-73.95': 1322448, '-73.86': 124359, '-73.94': 360437, '-73.90': 14566, '-73.87': 147130, '-73.79': 29227,
-     # '-73.92': 53989, '-73.93': 76041, '-73.91': 35051, '-73.77': 43243, '-73.81': 2331, '-73.88': 21175, '-73.89': 9998,
-     # '-73.80': 6042, '-74.10': 189, '-73.85': 3696, '-73.84': 4964, '-74.15': 520, '-74.16': 646, '-73.74': 138, '-74': 1524,
-     # '-73.83': 2809, '-73.82': 1783, '-74.04': 1374, '-74.03': 3190, '-74.02': 2449, '-73.73': 228, '-74.09': 216, '-74.07': 446,
-     # '-74.05': 566, '-74.08': 235, '-74.06': 591, '-73.70': 168, '-73.72': 248, '-74.12': 138, '-74.14': 146, '-74.23': 53,
-     # '-73.75': 132, '-73.76': 226, '-74.18': 356, '-73.71': 114, '-74.17': 724, '-74.11': 183, '-74.20': 78, '-74.25': 42,
-     # '-74.22': 96, '-74.19': 103, '-74.13': 118, '-74.21': 145, '-74.24': 37, '-73.69': 15}       
-
+                               mhist_inside_Boundingbox[line_text] = 1
 
 
 ```
+
+# The number points of pickup longitude out of bounding box of NYC for 14776614 pickup longitude The number of points in this band is really small if it is compared to the points number of pickup longitude inside the bounding box.
+
+```
+
+      # {'-73.61': 59, '-73.43': 11, '-73.00': 1, '-73.66': 135, '-73.62': 52, '-73.56': 19, '-73.60': 24, '-73.54': 22, '-73.59': 30,
+      # '-73.16': 5, '-73.69': 87, '-72.69': 1, '-73.63': 46, '-72.72': 1, '-73.05': 4, '-73.03': 5, '-73.68': 98, '-73.30': 12,
+      # '-73.51': 24, '-73.67': 61, '-73.53': 50, '-73.64': 68, '-73.09': 6, '-73.47': 7, '-73.65': 93, '-73.24': 1, '-73.52': 56,
+      # '-73.25': 5, '-73.55': 24, '-73.18': 3, '-72.94': 1, '-73.20': 2, '-73.58': 35, '-73.39': 4, '-73.26': 5, '-73.11': 3,
+      # '-73.42': 26, '-73.46': 12, '-73.5': 4, '-72.82': 2, '-73.32': 3, '-73.15': 7, '-73.48': 11, '-73.28': 4, '-73.37': 12,
+      # '-73.01': 2, '-73.38': 6, '-73.36': 7, '-73.29': 5, '-73.50': 9, '-73.57': 15, '-73.41': 17, '-72.88': 1, '-73.12': 2,
+      # '-73.49': 15, '-73.23': 4, '-72.96': 3, '-73.40': 7, '-73.13': 3, '-73.44': 10, '-73.04': 2, '-73.22': 2, '-73.34': 6,
+      # '-73.35': 2, '-73.08': 1, '-73.19': 3, '-72.89': 1, '-73.21': 5, '-73.45': 5, '-72.81': 1, '-72.78': 2, '-73.33': 4,
+      # '-72.84': 2, '-73': 1, '-73.06': 2, '-73.31': 7, '-72.77': 1, '-73.10': 2, '-73.27': 7, '-72.83': 2, '-72.97': 1}
+
+            if line[10] != "" and float(line[10]) >= float (-73.699215) and float(line[10])<= float(-72.699215):
+
+                        line_text1 = line[10]
+                        line_text1 = line_text1 [0:6]
+
+                        if line_text1 in mhist_outside_Boundingbox.keys():
+
+                               mhist_outside_Boundingbox[line_text1] += 1
+                        else:
+                               mhist_outside_Boundingbox[line_text1] = 1
+   
+```
+
+#### INSIDE THE BOUNDING BOX (MAX AND MINIMUM LATITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LATITUDE 
+#### -----------------------------------------------------------------------------------------------------
+
+### There are many pick up latitude points inside the box compared the latitude points outside the bounding box 
+
+```
+
+      #{'40.73': 1561073, '40.75': 2637136, '40.74': 2106817, '40.76': 2448920, '40.78': 854074, '40.77': 1699229, '40.79': 330860,
+      # '40.72': 1269417, '40.70': 250964, '40.64': 225531, '40.68': 78206, '40.71': 649978, '40.80': 177464, '40.67': 34643,
+      # '40.59': 450, '40.69': 61337, '40.81': 47559, '40.82': 19734, '40.85': 3294, '40.88': 721, '40.66': 12269, '40.65': 8336,
+      # '40.84': 9019, '40.63': 4946, '40.83': 9666, '40.87': 800, '40.62': 1185, '40.61': 951, '40.58': 780, '40.86': 1639,
+      # '40.89': 342, '40.60': 501, '40.90': 196, '40.57': 173, '40.50': 33, '40.51': 24, '40.52': 24, '40.56': 80, '40.5': 7,
+      # '40.53': 31, '40.54': 46, '40.91': 88, '40.55': 43, '40.49': 15}
+                
+                
+            if line[11] != "" and float(line[11]) >= float (40.495992) and float(line[11])<= float(40.915568):
+
+                        if float(line[11]) < float(max_pickup_latitude_bounding):
+                            max_pickup_latitude_bounding = line[11]
+                        if float(line[11]) > float(min_pickup_latitude_bounding):
+                            min_pickup_latitude_bounding = line[11]
+
+                        line_text2 = line[11]
+                        line_text2 = line_text2 [0:5]
+                        
+                        if line_text2 in mhist1_inside_Boundingbox.keys():
+
+                               mhist1_inside_Boundingbox[line_text2] += 1
+                        else:
+                               mhist1_inside_Boundingbox[line_text2] = 
+
+```
+
+### The number points of pickup latitude out of bounding box of NYC for 14776614 pickup latitude are few whether it is compared to the number of points inside the bounding box 
+
+```
+
+      # {'41.34': 6, '41.02': 58, '41.06': 66, '41.25': 6, '41.07': 20, '41.45': 278, '41.28': 3, '41.01': 40, '41.10': 18,
+      # '41.20': 9, '41.04': 48, '40.97': 46, '40.96': 52, '41.08': 11, '41.16': 10, '40.98': 55, '40.94': 81, '41.05': 41,
+      # '41.65': 3, '40.93': 126, '41.03': 51, '40.92': 122, '41.22': 4, '41.18': 8, '41.09': 12, '40.95': 53, '41.11': 17,
+      # '41.21': 13, '41.17': 5, '40.99': 32, '40.91': 69, '41.12': 10, '41.24': 3, '41.15': 12, '41.23': 12, '41.44': 3,
+      # '41.71': 1, '41.54': 3, '41.00': 32, '41.58': 6, '41.46': 4, '41.50': 2, '41.29': 4, '41.27': 1, '41.73': 1, '41.14': 8,
+      # '41.37': 2, '41.53': 2, '41.40': 4, '41.79': 3, '41': 1, '41.56': 3, '41.31': 8, '41.13': 7, '41.66': 1, '41.72': 1,
+      # '41.67': 1, '41.69': 2, '41.5': 2, '41.39': 1, '41.51': 3, '41.26': 7, '41.38': 3, '41.30': 1, '41.32': 3, '41.19': 2,
+      # '41.62': 1, '41.74': 2, '41.83': 1, '41.70': 2, '41.49': 1, '41.41': 3, '41.61': 1, '41.36': 4, '41.59': 1, '41.78': 1,
+      # '41.60': 1, '41.42': 1, '41.48': 1, '41.55': 1, '41.43': 2, '41.90': 5, '41.81': 2, '41.77': 1}
+
+            if line[11] != "" and float(line[11]) >= float (40.915568) and float(line[11])<= float(41.915568):
+
+                        line_text3 = line[11]
+                        line_text3 = line_text3 [0:5]
+
+                        if line_text3 in mhist1_outside_Boundingbox.keys():
+
+                               mhist1_outside_Boundingbox[line_text3] += 1
+                        else:
+                               mhist1_outside_Boundingbox[line_text3] = 1
+
+
+```
+
 <br>
 
 # Question 6
 
 <br>
 
-# In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. 
+### In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. 
 
-# I used a dictionary to get the total number of values for each field. Please run the python code to get the distinct values of other fields. 
+### I used a dictionary to get the total number of values for each field. Please run the python code to get the distinct values of other fields. 
 
-# For an example of distint values of some fields explained below: 
+### For an example of distint values of some fields explained below: 
 
 <br>
 
+### min and max of the rate code and passenger account:
+
 |   Field Name   | Distinct Values |
 | ------------- | --------------------- |
-|   Rate Code   | MAX: 14456067, MIN:  1|
+|   rate_code   | MAX: 14456067, MIN:  1|
 | passenger_count | MAX:  10471701, MIN: |
 
 <br>
@@ -379,33 +468,7 @@ pickup_datetime = line[5].replace('-',':')
 
             del mhist1['drop:ff:datetime']
 
-        ###
-            
-        medallion= line [0]    
-
-        if medallion in mhist2.keys():
-            mhist2[medallion] += 1
-        else:
-            mhist2[medallion] = 1
-
-        if 'medallion' in mhist2:
-
-            del mhist2['medallion']
-
-        ###
-
-        hack_license= line [1]    
-
-        if hack_license in mhist3.keys():
-            mhist3[hack_license] += 1
-        else:
-            mhist3[hack_license] = 1
-
-        if 'hack_license' in mhist3:
-            del mhist3['hack_license']
-
-        ###
-
+       
         rate_code = line [3]    
 
         if rate_code in mhist4.keys():
@@ -428,31 +491,6 @@ pickup_datetime = line[5].replace('-',':')
         if 'passenger_count' in mhist5:
              del mhist5['passenger_count']
 
-        ###
-
-        trip_time_in_secs = line [8]    
-
-        if trip_time_in_secs in mhist6.keys():
-             mhist6[trip_time_in_secs] += 1
-        else:
-             mhist6[trip_time_in_secs] = 1
-
-        if 'trip_time_in_secs' in mhist6:
-             del mhist6['trip_time_in_secs']
-
-        ###
-
-        trip_distance = line [9]
-        #trip_distance = trip_distance[0:4]
-
-        if trip_distance in mhist7.keys():
-             mhist7[trip_distance] += 1
-        else:
-             mhist7[trip_distance] = 1
-
-        if 'trip_distance' in mhist7:
-             del mhist7['trip_distance']
-
 
 ```
 
@@ -462,6 +500,8 @@ pickup_datetime = line[5].replace('-',':')
 
 <br>
 
+### The values of trip_time_in_secs, trip_distance and Rate Code outside the bounding box
+
 |   Field Name   | Max/Min Values |
 | ------------- | --------------------- |
 | trip_time_in_secs| MAX  10800, Min 0|
@@ -470,32 +510,14 @@ pickup_datetime = line[5].replace('-',':')
 
 
 ```
-
                 min_rate_code = line[3]
                 max_rate_code = line[3]
-
-                min_rate_code = line[8]
-                max_rate_code = line[8]
-
-                min_trip_distance   = line[9]
-                max_trip_distance   = line[9]
 
 
                 if line[3] > max_rate_code:
                         max_rate_code = line[3]
                 if line[3] < min_rate_code:
                         min_rate_code = line[3]
-
-                if int(line[8]) > int(max_trip_time_in_secs):
-                        max_trip_time_in_secs  = line[8]
-                if int(line[8]) < int(min_trip_time_in_secs):
-                        min_trip_time_in_secs  = line[8]
-
-                if line[9] > max_trip_distance :
-                        max_trip_distance = line[9]
-                if line[9] < min_trip_distance :
-                        min_trip_distance = line[9]
-
 
 ```
 
@@ -505,41 +527,22 @@ pickup_datetime = line[5].replace('-',':')
 
 <br>
 
-# Pickup Ddatetime
-# The average number of passengers each hour of the day 
+### Pickup Datetime
 
-|   Hour   | Avarage  |
-| ------------- | --------------------- |
-| 15| 1.7161581455566817|
-| 00| 1.7674645758797922|
-| 18| 1.7012934622800804|
-| 23| 1.7540406583168833|
-| 11| 1.6736848030241087|
-| 12| 1.6811567347356455|
-| 13| 1.688445186465027|
-| 09| 1.6280298565816753|
-| 07| 1.5957135230796233|
-|14|1.695371301700947|
-|22|1.7441527481804624|
-|17|1.7042513525845773|
-|06|1.5543789390756302|
-|21|1.723739471842693|
-|08|1.6261664483250076|
-|19|1.7074959246849928|
-|03|1.7749906599564864|
-|04|1.7498726500909643|
-|20|1.7098300345053143|
-|01|1.7650990993235585|
-|10|1.7715300962533436|
-|02|1.7715300962533436|
-|16|1.7186234442907942|
-|05|1.620607966457023|
+### The average number of passengers each hour of the day 
 
 <br>
 
 ```
-if Hour_datetime in d.keys():
+        Hour_datetime = pickup_datetime[11:13]
+        Hour_datetime1 = dropoff_datetime[11:13]
+
+      
+        if Hour_datetime in d.keys():
+
+
                 d[Hour_datetime] += 1
+                
         else:
                 d[Hour_datetime] = 1
 
@@ -551,6 +554,41 @@ if Hour_datetime in d.keys():
 
 
         # Get one out of every thousand rows (pickup_datetime)
+
+        if n % 1000 == 0:
+
+                if Hour_datetime in d1.keys():
+                        d1[Hour_datetime] += 1
+                else:
+                        d1[Hour_datetime] = 1
+
+                if Hour_datetime in mhist13.keys():
+
+                        mhist13[Hour_datetime] += int(line[7])
+                else:
+                        mhist13[Hour_datetime] = int(line[7])
+
+```
+
+###  The average number of passengers per day (pickup_datetime) 
+
+``` 
+
+        Avg_Passengers_Day = pickup_datetime[8:10]
+        Avg_Passengers_Day1 = dropoff_datetime[8:10]
+      
+        if Avg_Passengers_Day in d4.keys():
+
+                d4[Avg_Passengers_Day] += 1
+                
+        else:
+                d4[Avg_Passengers_Day] = 1
+
+        if Avg_Passengers_Day in mhist16.keys():
+
+                mhist16[Avg_Passengers_Day] += int(line[7])
+        else:
+                mhist16[Avg_Passengers_Day] = int(line[7])
 
 
 ```

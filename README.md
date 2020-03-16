@@ -286,8 +286,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 
 ### I take all points into the bounding box based on the longitude and litiude of NYC with computing the max and min values.
 
-####  INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
-#### -----------------------------------------------------------------------------------------------------
+##  INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
 
 ###  The number of points inside the bounding box for 14776614 pickup longitude is really a big number compared to the number of points outside the bounding box:
 
@@ -321,7 +320,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 
 ```
 
-# The number points of pickup longitude out of bounding box of NYC for 14776614 pickup longitude The number of points in this band is really small if it is compared to the points number of pickup longitude inside the bounding box.
+### The number points of pickup longitude out of bounding box of NYC for 14776614 pickup longitude The number of points in this band is really small if it is compared to the points number of pickup longitude inside the bounding box.
 
 ```
 
@@ -348,8 +347,8 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
    
 ```
 
-#### INSIDE THE BOUNDING BOX (MAX AND MINIMUM LATITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LATITUDE 
-#### -----------------------------------------------------------------------------------------------------
+## INSIDE THE BOUNDING BOX (MAX AND MINIMUM LATITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LATITUDE 
+
 
 ### There are many pick up latitude points inside the box compared the latitude points outside the bounding box 
 
@@ -434,7 +433,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 
 
 ```
-pickup_datetime = line[5].replace('-',':')
+       pickup_datetime = line[5].replace('-',':')
         pickup_datetime = pickup_datetime.replace(' ',':')
 
         pickup_datetime = pickup_datetime[0:4] + ':' + pickup_datetime[5:7] + ':' + pickup_datetime[8:10] + pickup_datetime[10:13]+ pickup_datetime[13:16]

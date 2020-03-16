@@ -59,8 +59,7 @@
 
         ########
 
-        # The smallest and lasrgest date of pickup_datetime
-        # Compare all dates with the first date in the list "01/01/13  03:11:48"
+        # The smallest and largest date of pickup_datetime
 
         if puc == 1:
             Smallest_date_pickup_datetime = fdt
@@ -141,66 +140,69 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 <br>
 
-# Some sample data for each field
+### Some sample data for each field
 
-# Sample 1
+### Sample 1
+
+### medallion, hack_license, vendor_id, rate_code, store_and_fwd_flag, pickup_datetime, dropoff_datetime, passenger_count, trip_time_in_secs, 
+### trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude.
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |
-| Medallion | DFD2202EE08F7A8DC9A57B02ACB81FE2|
-|Hack License |51EE87E3205C985EF8431D850C786310|
-|Vendor Id |CMT|
-|Rate Code |1|
-|Store and Fwd Flag |N|
-|Pickup Datetime |2013-01-07 23:25:03|
-|Dropoff Datetime | 2013-01-07 23:34:24|
-|Passenger Count |1|
-|Trip Time in Secs| 560|
-|Trip Distance |2.10|
-|Pickup Longitude| -73.97625|
-|Pickup Latitude  |40.748528|
-|Dropoff Longitude |-74.002586|
-|Dropoff Latitude |40.747868|
+| medallion | DFD2202EE08F7A8DC9A57B02ACB81FE2|
+|hack_license |51EE87E3205C985EF8431D850C786310|
+|vendor_id |CMT|
+|rate_code |1|
+|store_and_fwd_flag |N|
+|pickup_datetime |2013-01-07 23:25:03|
+|dropoff_datetime | 2013-01-07 23:34:24|
+|passenger_count |1|
+|trip_time_in_secs| 560|
+|trip_distance |2.10|
+|pickup_longitude| -73.97625|
+|pickup_latitude  |40.748528|
+|dropoff_longitude |-74.002586|
+|dropoff_latitude |40.747868|
 
 <br>
-# Sample 2
+### Sample 2
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |
-|Medallion | 2D4B95E2FA7B2E85118EC5CA4570FA58|
-|Hack License |CD2F522EEE1FF5F5A8D8B679E23576B3|
-|Vendor Id |CMT|
-|Rate Code |1|
-|Store and Fwd Flag |N|
-|Pickup Datetime |2013-01-07 15:33:28|
-|Dropoff Datetime | 2013-01-07 15:49:26|
-|Passenger Count |2|
-|Trip Time in Secs| 957|
-|Trip Distance |2.50|
-|Pickup Longitude| -73.977936|
-|Pickup Latitude  |40.786983|
-|Dropoff Longitude |-73.952919|
-|Dropoff Latitude |40.80637|
+|medallion | 2D4B95E2FA7B2E85118EC5CA4570FA58|
+|hack_license |CD2F522EEE1FF5F5A8D8B679E23576B3|
+|vendor_id |CMT|
+|rate_code |1|
+|store_and_fwd_flag |N|
+|pickup_datetime |2013-01-07 15:33:28|
+|dropoff_datetime | 2013-01-07 15:49:26|
+|passenger_count |2|
+|trip_time_in_secs| 957|
+|trip_distance |2.50|
+|pickup_longitude| -73.977936|
+|pickup_latitude  |40.786983|
+|dropoff_longitude |-73.952919|
+|dropoff_latitude |40.80637|
 
 <br>
-# Sample 3
+### Sample 3
 
 |    Sample Data  | Description |
 | ------------- | --------------------- |
-|Medallion | 3349F919AA8AE5DC9C50A3773EA45BD8|
-|Hack License |7CE849FEF67514F080AF80D990F7EF7F|
-|Vendor Id |CMT|
-|Rate Code |1|
-|Store and Fwd Flag |N|
-|Pickup Datetime |2013-01-10 15:42:29|
-|Dropoff Datetime |2013-01-10 16:04:02|
-|Passenger Count |1|
-|Trip Time in Secs|1293|
-|Trip Distance |3.20|
-|Pickup Longitude|-73.994911|
-|Pickup Latitude  |40.723221|
-|Dropoff Longitude |-73.971558|
-|Dropoff Latitude |40.761612|
+|medallion | 3349F919AA8AE5DC9C50A3773EA45BD8|
+|hack_license|7CE849FEF67514F080AF80D990F7EF7F|
+|vendor_id |CMT|
+|rate_code|1|
+|store_and_fwd_flag |N|
+|pickup_datetime |2013-01-10 15:42:29|
+|dropoff_datetime |2013-01-10 16:04:02|
+|passenger_count |1|
+|trip_time_in_secs|1293|
+|trip_distance |3.20|
+|pickup_longitude|-73.994911|
+|pickup_latitude  |40.723221|
+|dropoff_longitude |-73.971558|
+|dropoff_latitude |40.761612|
 
 <br>
 

@@ -620,7 +620,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 ![Image of screencapture](images/AVGPassengersPickup.JPG)
 
 ### The average of passengers per hour (Droopoff)
-![Image of screencapture](images/Droppoff.JPG)
+![Image of screencapture](images/Droppoff.jpg)
 
 
 <br>
@@ -630,10 +630,10 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line
 <br>
 
 ### The average of passengers per hour - Each Thousands row (Puckup)
-![Image of screencapture](images/PickupAVGThousands.JPG)
+![Image of screencapture](images/PickupAVGThousands.jpg)
 
 ### The average of passengers per hour - Each Thousands row (Droopoff)
-![Image of screencapture](images/DroppoffAVGThousands.JPG)
+![Image of screencapture](images/DroppoffAVGThousands.jpg)
 
 
 

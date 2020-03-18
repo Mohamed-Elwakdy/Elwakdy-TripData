@@ -239,6 +239,19 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ### The geographic range of my data (min/max - X/Y)
 
+### Getting the maximum and minimum longitude and latitude. We can see here, The minimum and maximum latitude is invalid and The maximum pickup longitude is invalid.
+### Also, the mimimum and maximum dropoff longitude are invalid as well.  
+
+
+|  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
+| ------------- | --------------------- |
+| Max Pickup Longitude/Pickup  | -2771.2854|
+|  Max Pickup Latitude/Pickup   | 3310.3645|
+| Min Packup latitude/Pickup|-3547.9207|
+| Max Dropoff Longitude/Dropoff  |-2350.9556|
+| Min Dropoff Longitude/Dropoff| 2228.7375 |
+
+
 ### Here, I take the logitude and latitude points into consideration into a big boundary box and then calculate the max and min values.
 
 

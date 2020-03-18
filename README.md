@@ -275,8 +275,22 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 |  Max Dropoff Latitude/Dropoff   |83.516693 |
 | Min Dropoff latitude/Dropoff| -0.56333297 |
 
+```
+if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
 
+                     if float(line[10]) < float(max_pickup_longitude_big_bounday):
+                            max_pickup_longitude_big_bounday = line[10]
+                     if float(line[10]) > float(min_pickup_longitude_big_bounday):
+                            min_pickup_longitude_big_bounday = line[10]
 
+                if line[11] != "" and float(line[11]) <= 90 and float(line[11])>=-90:
+
+                     if float(line[11]) > float(max_pickup_latitude_big_bounday):
+                            max_pickup_latitude_big_bounday = line[11]
+                     if float(line[11]) < float(min_pickup_latitude_big_bounday):
+                            min_pickup_latitude_big_bounday = line[11]
+
+```
 
 <br>
 
@@ -291,21 +305,22 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 ### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
 
-```
-if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180 and line[11] != "" and float(line[11]) <= 90 and float(line[11])>=-90:
+<br>
 
-                     if float(line[10]) < float(max_pickup_longitude_big_bounday):
-                            max_pickup_longitude_big_bounday = line[10]
-                     if float(line[10]) > float(min_pickup_longitude_big_bounday):
-                            min_pickup_longitude_big_bounday = line[10]
-        
+### Although all the latitude and longitude pickup/dropoff points are invalid points, the mapping of maximum pickup longitude against minimum pickup latitude, maximum pickup latitude against minmimum pickup longitude, maximum droppoff longitude against minimum droppoff latitude and maximum dropoff latitude against minimum dropoff longitude are out of the New York city. 
+### Because of this, I need to create another bounding box includes the maximum and minimum pickup/dropoff longitude and latitude for New York city.
 
-                     if float(line[11]) > float(max_pickup_latitude_big_bounday):
-                            max_pickup_latitude_big_bounday = line[11]
-                     if float(line[11]) < float(min_pickup_latitude_big_bounday):
-                            min_pickup_latitude_big_bounday = line[11]
+|  Longitude/Latitude NYC   | Geographic range of my data (min/max - X/Y) |
+| ------------- | --------------------- |
+| Max Longitude  | -73.699215|
+| Min Longitude| -74.257159|
+| Max Latitude   | 40.915568|
+| Min latitude|  40.495992 |
 
-```
+
+
+
+
 
 <br>
 

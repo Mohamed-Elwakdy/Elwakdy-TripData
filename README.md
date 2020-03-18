@@ -251,8 +251,17 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 | Max Dropoff Longitude/Dropoff  |-2350.9556|
 | Min Dropoff Longitude/Dropoff| 2228.7375 |
 
+```
+if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
 
-### Here, I take the logitude and latitude points into consideration into a big boundary box and then calculate the max and min values.
+                     if float(line[10]) < float(max_pickup_longitude_big_bounday):
+                            max_pickup_longitude_big_bounday = line[10]
+                     if float(line[10]) > float(min_pickup_longitude_big_bounday):
+                            min_pickup_longitude_big_bounday = line[10]
+```
+
+### Because there are some maximum and minimum latitude/longitude points are invalid, I create a big bounding box where Longitude is in the range -180 and +180 and latitude is in in the range -90 and +90.
+### Getting the max and min values inside the bounding box for longitude and latitude points. 
 
 
 |  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
@@ -261,10 +270,13 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 | Min Pickup Longitude/Pickup| 112.40418 |
 |  Max Pickup Latitude/Pickup   | 82.514046|
 | Min Packup latitude/Pickup| -39.762348 |
-| Max Dropoff Longitude/Dropoff  | |
-| Min Dropoff Longitude/Dropoff|  |
-|  Max Dropoff Latitude/Dropoff   | |
-| Min Dropoff latitude/Dropoff|  |
+| Max Dropoff Longitude/Dropoff  |-179.36124 |
+| Min Dropoff Longitude/Dropoff| 111.49388 |
+|  Max Dropoff Latitude/Dropoff   |83.516693 |
+| Min Dropoff latitude/Dropoff| -0.56333297 |
+
+
+
 
 <br>
 

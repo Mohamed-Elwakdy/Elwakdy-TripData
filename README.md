@@ -660,7 +660,8 @@ rate_code, store_and_fwd_flag and rate_code .
 ```
 
 ### The average of passengers per hour (Puckup)
-![Image of screencapture](images/pickupAVG1.jpg)
+
+![Image of screencapture](images/DroppoffAVG.jpg)
 
 ### The average of passengers per hour (Dropoff)
 ![Image of screencapture](images/DroppoffAVG.jpg)

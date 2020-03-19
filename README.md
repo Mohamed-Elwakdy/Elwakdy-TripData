@@ -373,7 +373,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 ![Image of screencapture](images/Map7-MaxLongMinLatDropoffROI.jpg)
 
 ### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map (inside the bounding box of NYC)
-![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
+![Image of screencapture](images/Map8-MaxLatMinLongDropoffROI.jpg)
 
 
 ### When I take a band outside the bounding box, the numnber of longitude pickup points is really small if it is compared to the number of pickup longitude points inside the bounding box.

@@ -544,7 +544,7 @@ rate_code, store_and_fwd_flag and rate_code .
 ### "Zero" second. So, I put the minimum trip_time_in_secs is "300" seconds which is equivalent to 5 minutes. 
 
 ```
- if int(line[8]) > int(max_trip_time_in_secs):
+            if int(line[8]) > int(max_trip_time_in_secs):
                         max_trip_time_in_secs  = line[8]
             if int(line[8]) < int(min_trip_time_in_secs):
                         min_trip_time_in_secs  = line[8]
@@ -591,9 +591,6 @@ rate_code, store_and_fwd_flag and rate_code .
 <br>
 
 ```
-        Hour_datetime = pickup_datetime[11:13]
-        Hour_datetime1 = dropoff_datetime[11:13]
-
       
         if Hour_datetime in d.keys():
 
@@ -663,9 +660,9 @@ rate_code, store_and_fwd_flag and rate_code .
 ```
 
 ### The average of passengers per hour (Puckup)
-![Image of screencapture](images/PickupAVG.jpg)
+![Image of screencapture](images/pickupAVG.jpg)
 
-### The average of passengers per hour (Droopoff)
+### The average of passengers per hour (Dropoff)
 ![Image of screencapture](images/DroppoffAVG.jpg)
 
 
@@ -678,8 +675,8 @@ rate_code, store_and_fwd_flag and rate_code .
 ### The average of passengers per hour - Each Thousands row (Puckup)
 ![Image of screencapture](images/PickupAVGThousands.jpg)
 
-### The average of passengers per hour - Each Thousands row (Droopoff)
-![Image of screencapture](images/Droppoff AVGThousands.jpg)
+### The average of passengers per hour - Each Thousands row (Dropoff)
+![Image of screencapture](images/DroppoffAVGThousands.jpg)
 
 
 

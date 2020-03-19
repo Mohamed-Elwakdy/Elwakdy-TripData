@@ -398,7 +398,7 @@ if line[10] != "" and float(line[10]) >= float (-73.699215) and float(line[10])<
 
 ```
 
-### The range of the total number of 5 maximum pickup longitude and latitude points, in case, I worked on two differentbounding boxes: 
+### The total number of 5 maximum pickup longitude and latitude points, in case, I worked on two different bounding boxes: 
 
 ### 1- Inside the bounding box where the Max Longitude is -73.699215, Min Longitude is -74.257159,  Max Latitude is 40.915568 and Min latitude is 40.495992
 ### 2- Ouside the bounding box where the Max Longitude is  -72.699215, Min longitude is -73.699215, Max Latitude is 41.915568 and Min Latitude is 40.915568
@@ -422,8 +422,6 @@ if line[10] != "" and float(line[10]) >= float (-73.699215) and float(line[10])<
 | -73.65  |93 |
 | -73.69| 87|
 | -73.64|68|
-
-List_max_values_longitude_pickup_band = {'': , '': , '': , '': , '': }
 
 |Pickup Latitude point|Total 5 max numbers inside Boundnig Box of NYC|
 | ------------- | --------------------- |
@@ -452,10 +450,10 @@ List_max_values_longitude_pickup = dict (sorted(mhist_inside_Boundingbox.items()
 
 <br>
 
-### In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license,vendor_id, rate_code,store_and_fwd_flag, passenger_count, trip_time_in_secs and trip_distance are getting on. 
+###  Here, I got the distinct values of some fields such as pickup_datetime, dropoff_datetime, medallion, hack_license,vendor_id, rate_code,store_and_fwd_flag, passenger_count, trip_time_in_secs and trip_distance. 
 
-### I used a dictionary to get the total number of values for most fields in the dataset. The most valiable distinct  values of the fields: passenger_account,
-rate_code, store_and_fwd_flag and rate_code .
+### I used many dictionaries to get the total number of values for most fields in the dataset. The most valiable distinct  values of the fields are passenger_account,
+rate_code, store_and_fwd_flag and rate_code
 
 
 |   Field Name   | Distinct Values |
@@ -522,9 +520,8 @@ rate_code, store_and_fwd_flag and rate_code .
 
 <br>
 
-### The number of passenger should be not greather than 5 and the minimum passanger is "Zero" and this is unlogic because the minimum number of passengers should be not less than 1 and not greather than 5.
-### The maximum number of the passengers in that dataset is 255 and this is unlogic, as the mimimum number of passengers is 0 and this is unlogic too. 
-
+### The number of passenger should be not greather than 5 and the minimum passangers not to be "Zero" because this is unlogic. The minimum number of passengers should be not less than 1. 
+### The maximum number of the passengers in that dataset is 255 and this is unlogic, as the mimimum number of passengers is 0 and this is unlogic as well.
 ### In this code, I put the maximum number of passengers is 5 and the minimum number of passengers is 1.   
 
 ```
@@ -559,7 +556,7 @@ rate_code, store_and_fwd_flag and rate_code .
 
 ```
 
-### in trip_distance field, the max trip distance is 99.90 and the minimum trip distance .00 is unlogic number. 
+### In trip_distance field, the max trip distance is 99.90 and the minimum trip distance .00 is unlogic number. 
 
 ```
             if line[9] > max_trip_distance:
@@ -662,17 +659,16 @@ rate_code, store_and_fwd_flag and rate_code .
 
 ```
 
-### The plots of The average of passengers per day - Puckup and dropoff are very similar to each other. 
-### The plots of The average of passengers per day for each Thousands row - pickup and dropoff are very similar to each other. 
-### This means that there is no change in the avarage of passengers evern if we select (pickup) a row for every thousand row between the two plots. 
+### The average of passengers per day - Puckup and dropoff are very similar to each other. 
+### The average of passengers per day for each Thousands row - pickup and dropoff are very similar to each other. 
+### This means that there is no change in the avarage of passengers even if we select a row for every thousand row between the two plots. 
  
 
-### The average of passengers per day (Puckup)
-
 ![Image of screencapture](images/NEWPickupAVGAgainstDay.jpg)
+#### The average of passengers per day (Puckup)
 
-### The average of passengers per day (Dropoff)
 ![Image of screencapture](images/DropoffAVGAgainstDay.jpg)
+#### The average of passengers per day (Dropoff)
 
 
 <br>
@@ -681,11 +677,12 @@ rate_code, store_and_fwd_flag and rate_code .
 
 <br>
 
-### The average of passengers per day - Each Thousands row (Puckup)
-![Image of screencapture](images/PickupAVGAgainstDay-ThousandsRow.jpg)
 
-### The average of passengers per day - Each Thousands row (Dropoff)
+![Image of screencapture](images/PickupAVGAgainstDay-ThousandsRow.jpg)
+#### The average of passengers per day - Each Thousands row (Puckup)
+
 ![Image of screencapture](images/DropoffAVGAgainstDayThousandsRow.jpg)
+#### The average of passengers per day - Each Thousands row (Dropoff)
 
 
 

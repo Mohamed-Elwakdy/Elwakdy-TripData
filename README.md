@@ -664,7 +664,7 @@ rate_code, store_and_fwd_flag and rate_code .
 ![Image of screencapture](images/NEWPickupAVGAgainstDay.jpg)
 
 ### The average of passengers per hour (Dropoff)
-![Image of screencapture](images/Dropoff AVG Against Day.jpg)
+![Image of screencapture](images/DropoffAVGAgainstDay.jpg)
 
 
 <br>
@@ -674,10 +674,10 @@ rate_code, store_and_fwd_flag and rate_code .
 <br>
 
 ### The average of passengers per hour - Each Thousands row (Puckup)
-![Image of screencapture](images/Pickup AVG Against Day - Thousands Row (Pickup Datetime).jpg)
+![Image of screencapture](images/PickupAVGAgainstDay-ThousandsRow.jpg)
 
 ### The average of passengers per hour - Each Thousands row (Dropoff)
-![Image of screencapture](images/NewDropoffAVGAgainstDayThousandsRow(Dropoff Datetime ).jpg)
+![Image of screencapture](images/DropoffAVGAgainstDayThousandsRow.jpg)
 
 
 

@@ -296,16 +296,16 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 ### All points in maps below out of area of NYC, so I need to make a bounding box for the area of NYC to be all maximum and minimum longitude/Latitude points inside the area of NYC
 
-### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
+## Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
 ![Image of screencapture](images/Map1-MaxLongMinLatPickup.jpg)
 
-### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map
+## Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map
 ![Image of screencapture](images/Map2-MaxLatMinLongPickup.jpg)
 
-### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
+## Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
 ![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
 
-### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
+## Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
 ![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
 
 <br>
@@ -363,20 +363,22 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 
 ```
-### Here, I can see the maximim and minimum longitude/latitude points are close to the area of NYC, but still we need to reduce the size a bounding box to make it to take some other longitude and latitude points out of the Region of Interest. 
-### Also, I can see the values of pickup maximum longitude/latitude points are very close to the values of dropoff maximum and minimum longitude/latitude points which means once we reduce the size of the bounding box the longitude and latitude points (pickup and dropoff points) become very close to each other.     
-### If I go and reduce the size of bounding box more and more, the longitude and latitude points (pickup and dropoff points) could be very close to each other more and more. 
+<br>
 
-### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map (inside the bounding box of NYC)
+### Here, I can see the maximim and minimum longitude/latitude points on a map are close to the area of NYC, but still we need to reduce the size a bounding box to make it to take some other longitude and latitude points out of the bounding box. 
+### Also, I can see the values of pickup maximum longitude/latitude points are very close to the values of dropoff maximum and minimum longitude/latitude points which means once we reduce the size of the bounding box the maximum and minimum longitude and latitude points (pickup and dropoff points) become very close to each other.     
+### If I go and reduce the size of bounding box more and more, the maximum and minimum longitude and latitude points (pickup and dropoff points) should be very close to each other more and more. 
+
+## Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map (inside the bounding box of NYC)
 ![Image of screencapture](images/Map5-MaxLongMinLatPickup-ROI.jpg)
 
-### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map (inside the bounding box of NYC)
+## Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map (inside the bounding box of NYC)
 ![Image of screencapture](images/Map6-MaxLatMinLongDropoff.jpg)
 
-### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map (inside the bounding box of NYC)
+## Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map (inside the bounding box of NYC)
 ![Image of screencapture](images/Map7-MaxLongMinLatDropoffROI.jpg)
 
-### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map (inside the bounding box of NYC)
+## Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map (inside the bounding box of NYC)
 ![Image of screencapture](images/Map8-MaxLatMinLongDropoffROI.jpg)
 
 

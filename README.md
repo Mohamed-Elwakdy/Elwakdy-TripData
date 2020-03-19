@@ -294,6 +294,8 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 <br>
 
+### All points in maps below out of area of NYC, so I need to make a bounding box for the area of NYC to be all maximum and minimum longitude/Latitude points inside the area of NYC
+
 ### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
 ![Image of screencapture](images/Map1-MaxLongMinLatPickup.jpg)
 
@@ -305,7 +307,6 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 ### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
 ![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
-
 
 <br>
 
@@ -362,9 +363,17 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 ```
 
-Map
+### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map (inside the bounding box of NYC)
+![Image of screencapture](images/Map5-MaxLongMinLatPickup-ROI.jpg)
 
-#########################################################
+### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map (inside the bounding box of NYC)
+![Image of screencapture](images/Map2-MaxLatMinLongPickup.jpg)
+
+### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map (inside the bounding box of NYC)
+![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
+
+### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map (inside the bounding box of NYC)
+![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
 
 
 ### When I take a band outside the bounding box, the numnber of longitude pickup points is really small if it is compared to the number of pickup longitude points inside the bounding box.

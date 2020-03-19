@@ -239,7 +239,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 ### The geographic range of my data (min/max - X/Y)
 
-### Getting the maximum and minimum longitude and latitude. We can see here, The minimum and maximum latitude is invalid and The maximum pickup longitude is invalid.
+### Getting the maximum and minimum longitude and latitude. The minimum and maximum latitude is invalid and The maximum pickup longitude is invalid as well.
 ### Also, the mimimum and maximum dropoff longitude are invalid as well.  
 
 
@@ -260,7 +260,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
                             min_pickup_longitude_big_bounday = line[10]
 ```
 
-### Because there are some maximum and minimum latitude/longitude points are invalid, I create a big bounding box where Longitude is in the range -180 and +180 and latitude is in the range -90 and +90.
+### Because there are some maximum and minimum latitude/longitude points are invalid, I will create a big bounding box where Longitude is in the range -180 and +180 and latitude is in the range -90 and +90.
 ### Getting the max and min values inside the bounding box for longitude and latitude points. 
 
 
@@ -310,7 +310,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 <br>
 
-### Although all the latitude and longitude pickup/dropoff points are invalid points, the mapping of maximum pickup longitude against minimum pickup latitude, maximum pickup latitude against minmimum pickup longitude, maximum droppoff longitude against minimum droppoff latitude and maximum dropoff latitude against minimum dropoff longitude are out of the New York city. 
+### Although all the latitude and longitude pickup/dropoff points are valid points, these points are out of the New York city. 
 ### Because of this, I need to create another bounding box includes the maximum and minimum pickup/dropoff longitude and latitude for New York city.
 
 ## INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 

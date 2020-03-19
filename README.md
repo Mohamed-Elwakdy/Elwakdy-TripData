@@ -370,7 +370,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 ![Image of screencapture](images/Map6-MaxLatMinLongDropoff.jpg)
 
 ### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map (inside the bounding box of NYC)
-![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
+![Image of screencapture](images/Map7-MaxLongMinLatDropoffROI.jpg)
 
 ### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map (inside the bounding box of NYC)
 ![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)

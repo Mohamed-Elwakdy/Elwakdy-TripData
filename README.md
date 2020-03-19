@@ -245,42 +245,42 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 
 |  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
 | ------------- | --------------------- |
-| Max Pickup Longitude/Pickup  | -2771.2854|
-|  Max Pickup Latitude/Pickup   | 3310.3645|
+| Max Pickup Longitude/Pickup  | 3310.3645|
+|  Max Pickup Latitude/Pickup   |-2771.2854 |
 | Min Packup latitude/Pickup|-3547.9207|
-| Max Dropoff Longitude/Dropoff  |-2350.9556|
-| Min Dropoff Longitude/Dropoff| 2228.7375 |
+| Max Dropoff Longitude/Dropoff  |2228.7375|
+| Min Dropoff Longitude/Dropoff| -2350.9556 |
 
 ```
 if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
 
-                     if float(line[10]) < float(max_pickup_longitude_big_bounday):
+                     if float(line[10]) > float(max_pickup_longitude_big_bounday):
                             max_pickup_longitude_big_bounday = line[10]
-                     if float(line[10]) > float(min_pickup_longitude_big_bounday):
+                     if float(line[10]) < float(min_pickup_longitude_big_bounday):
                             min_pickup_longitude_big_bounday = line[10]
 ```
 
-### Because there are some maximum and minimum latitude/longitude points are invalid, I create a big bounding box where Longitude is in the range -180 and +180 and latitude is in in the range -90 and +90.
+### Because there are some maximum and minimum latitude/longitude points are invalid, I create a big bounding box where Longitude is in the range -180 and +180 and latitude is in the range -90 and +90.
 ### Getting the max and min values inside the bounding box for longitude and latitude points. 
 
 
 |  Longitude/Latitude   | Geographic range of my data (min/max - X/Y) |
 | ------------- | --------------------- |
-| Max Pickup Longitude/Pickup  | -179.36124|
-| Min Pickup Longitude/Pickup| 112.40418 |
+| Max Pickup Longitude/Pickup  | 112.40418|
+| Min Pickup Longitude/Pickup| -179.36124 |
 |  Max Pickup Latitude/Pickup   | 82.514046|
 | Min Packup latitude/Pickup| -39.762348 |
-| Max Dropoff Longitude/Dropoff  |-179.36124 |
-| Min Dropoff Longitude/Dropoff| 111.49388 |
+| Max Dropoff Longitude/Dropoff  |111.49388 |
+| Min Dropoff Longitude/Dropoff| -179.36124 |
 |  Max Dropoff Latitude/Dropoff   |83.516693 |
 | Min Dropoff latitude/Dropoff| -0.56333297 |
 
 ```
 if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
 
-                     if float(line[10]) < float(max_pickup_longitude_big_bounday):
+                     if float(line[10]) > float(max_pickup_longitude_big_bounday):
                             max_pickup_longitude_big_bounday = line[10]
-                     if float(line[10]) > float(min_pickup_longitude_big_bounday):
+                     if float(line[10]) < float(min_pickup_longitude_big_bounday):
                             min_pickup_longitude_big_bounday = line[10]
 
                 if line[11] != "" and float(line[11]) <= 90 and float(line[11])>=-90:
@@ -310,42 +310,42 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 ### Although all the latitude and longitude pickup/dropoff points are invalid points, the mapping of maximum pickup longitude against minimum pickup latitude, maximum pickup latitude against minmimum pickup longitude, maximum droppoff longitude against minimum droppoff latitude and maximum dropoff latitude against minimum dropoff longitude are out of the New York city. 
 ### Because of this, I need to create another bounding box includes the maximum and minimum pickup/dropoff longitude and latitude for New York city.
 
+## INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
+## ----------------------------------------------------------------------------------------------------
+
+
+### The max longitude and latitude for NYCis: 
+
 |  Longitude/Latitude NYC   | Geographic range of my data (min/max - X/Y) |
 | ------------- | --------------------- |
-| Max Longitude  | -73.699215|
+| Max Longitude | -73.699215|
 | Min Longitude| -74.257159|
 | Max Latitude   | 40.915568|
-| Min latitude|  40.495992 |
+| Min Latitude|  40.495992 |
 
+### The max longitude and latitude for pickup/dropoff points is: 
 
-
-
-
+|  Longitude/Latitude inside Bounding Box (NYC)  | Geographic range of my data (min/max - X/Y) |
+| ------------- | --------------------- |
+| Max Pickup Longitude/Pickup  |-73.699226 |
+| Min Pickup Longitude/Pickup| -74.257118 |
+| Max Pickup Latitude/Pickup   |40.915531 |
+| Min Packup latitude/Pickup|40.496376|
+| Max Dropoff Longitude/Dropoff  |-73.699226 |
+| Min Dropoff Longitude/Dropoff|-74.256958 |
+| Max Dropoff Latitude/Dropoff   |40.915565 |
+| Min Dropoff latitude/Dropoff|40.495998 |
 
 <br>
 
-### I take all points into the bounding box based on the longitude and litiude of NYC with computing the max and min values.
+### Compute the number points of pickup longitude inside the bounding box. 
+### The number of points inside the bounding box for 14776614 pickup longitude is really big number compared to the number of points outside the bounding box:
 
-##  INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
-
-###  The number of points inside the bounding box for 14776614 pickup longitude is really a big number compared to the number of points outside the bounding box:
-
-```
-    
-                
-                #{'-74.00': 1581119, '-73.97': 2576599, '-73.96': 1549802, '-73.99': 2503233, '-73.98': 3567237, '-74.01': 293161,
-                # '-73.78': 159632, '-73.95': 1322448, '-73.86': 124359, '-73.94': 360437, '-73.90': 14566, '-73.87': 147130, '-73.79': 29227,
-                # '-73.92': 53989, '-73.93': 76041, '-73.91': 35051, '-73.77': 43243, '-73.81': 2331, '-73.88': 21175, '-73.89': 9998,
-                # '-73.80': 6042, '-74.10': 189, '-73.85': 3696, '-73.84': 4964, '-74.15': 520, '-74.16': 646, '-73.74': 138, '-74': 1524,
-                # '-73.83': 2809, '-73.82': 1783, '-74.04': 1374, '-74.03': 3190, '-74.02': 2449, '-73.73': 228, '-74.09': 216, '-74.07': 446,
-                # '-74.05': 566, '-74.08': 235, '-74.06': 591, '-73.70': 168, '-73.72': 248, '-74.12': 138, '-74.14': 146, '-74.23': 53,
-                # '-73.75': 132, '-73.76': 226, '-74.18': 356, '-73.71': 114, '-74.17': 724, '-74.11': 183, '-74.20': 78, '-74.25': 42,
-                # '-74.22': 96, '-74.19': 103, '-74.13': 118, '-74.21': 145, '-74.24': 37, '-73.69': 15}
-                
+```                
             if line[10] != "" and float(line[10]) >= float (-74.257159) and float(line[10])<= float(-73.699215):
-                        if float(line[10]) < float(max_pickup_longitude_bounding):
+                        if float(line[10]) > float(max_pickup_longitude_bounding):
                             max_pickup_longitude_bounding = line[10]
-                        if float(line[10]) > float(min_pickup_longitude_bounding):
+                        if float(line[10]) < float(min_pickup_longitude_bounding):
                             min_pickup_longitude_bounding = line[10]
 
                         line_text = line[10]
@@ -360,21 +360,15 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 ```
 
-### The number points of pickup longitude out of bounding box of NYC for 14776614 pickup longitude The number of points in this band is really small if it is compared to the points number of pickup longitude inside the bounding box.
+Map
+
+#########################################################
+
+
+### When I take a band outside the bounding box, the numnber of longitude pickup points is really small if it is compared to the number of pickup longitude points inside the bounding box.
 
 ```
-
-      # {'-73.61': 59, '-73.43': 11, '-73.00': 1, '-73.66': 135, '-73.62': 52, '-73.56': 19, '-73.60': 24, '-73.54': 22, '-73.59': 30,
-      # '-73.16': 5, '-73.69': 87, '-72.69': 1, '-73.63': 46, '-72.72': 1, '-73.05': 4, '-73.03': 5, '-73.68': 98, '-73.30': 12,
-      # '-73.51': 24, '-73.67': 61, '-73.53': 50, '-73.64': 68, '-73.09': 6, '-73.47': 7, '-73.65': 93, '-73.24': 1, '-73.52': 56,
-      # '-73.25': 5, '-73.55': 24, '-73.18': 3, '-72.94': 1, '-73.20': 2, '-73.58': 35, '-73.39': 4, '-73.26': 5, '-73.11': 3,
-      # '-73.42': 26, '-73.46': 12, '-73.5': 4, '-72.82': 2, '-73.32': 3, '-73.15': 7, '-73.48': 11, '-73.28': 4, '-73.37': 12,
-      # '-73.01': 2, '-73.38': 6, '-73.36': 7, '-73.29': 5, '-73.50': 9, '-73.57': 15, '-73.41': 17, '-72.88': 1, '-73.12': 2,
-      # '-73.49': 15, '-73.23': 4, '-72.96': 3, '-73.40': 7, '-73.13': 3, '-73.44': 10, '-73.04': 2, '-73.22': 2, '-73.34': 6,
-      # '-73.35': 2, '-73.08': 1, '-73.19': 3, '-72.89': 1, '-73.21': 5, '-73.45': 5, '-72.81': 1, '-72.78': 2, '-73.33': 4,
-      # '-72.84': 2, '-73': 1, '-73.06': 2, '-73.31': 7, '-72.77': 1, '-73.10': 2, '-73.27': 7, '-72.83': 2, '-72.97': 1}
-
-            if line[10] != "" and float(line[10]) >= float (-73.699215) and float(line[10])<= float(-72.699215):
+if line[10] != "" and float(line[10]) >= float (-73.699215) and float(line[10])<= float(-72.699215):
 
                         line_text1 = line[10]
                         line_text1 = line_text1 [0:6]
@@ -384,69 +378,57 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
                                mhist_outside_Boundingbox[line_text1] += 1
                         else:
                                mhist_outside_Boundingbox[line_text1] = 1
-   
-```
-
-## INSIDE THE BOUNDING BOX (MAX AND MINIMUM LATITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LATITUDE 
-
-
-### There are many pick up latitude points inside the box compared the latitude points outside the bounding box 
 
 ```
 
-      #{'40.73': 1561073, '40.75': 2637136, '40.74': 2106817, '40.76': 2448920, '40.78': 854074, '40.77': 1699229, '40.79': 330860,
-      # '40.72': 1269417, '40.70': 250964, '40.64': 225531, '40.68': 78206, '40.71': 649978, '40.80': 177464, '40.67': 34643,
-      # '40.59': 450, '40.69': 61337, '40.81': 47559, '40.82': 19734, '40.85': 3294, '40.88': 721, '40.66': 12269, '40.65': 8336,
-      # '40.84': 9019, '40.63': 4946, '40.83': 9666, '40.87': 800, '40.62': 1185, '40.61': 951, '40.58': 780, '40.86': 1639,
-      # '40.89': 342, '40.60': 501, '40.90': 196, '40.57': 173, '40.50': 33, '40.51': 24, '40.52': 24, '40.56': 80, '40.5': 7,
-      # '40.53': 31, '40.54': 46, '40.91': 88, '40.55': 43, '40.49': 15}
-                
-                
-            if line[11] != "" and float(line[11]) >= float (40.495992) and float(line[11])<= float(40.915568):
+### The range of the total number of 5 maximum pickup longitude and latitude points, in case, I worked on two differentbounding boxes: 
 
-                        if float(line[11]) < float(max_pickup_latitude_bounding):
-                            max_pickup_latitude_bounding = line[11]
-                        if float(line[11]) > float(min_pickup_latitude_bounding):
-                            min_pickup_latitude_bounding = line[11]
+### 1- Inside the bounding box where the Max Longitude is -73.699215, Min Longitude is -74.257159,  Max Latitude is 40.915568 and Min latitude is 40.495992
+### 2- Ouside the bounding box where the Max Longitude is  -72.699215, Min longitude is -73.699215, Max Latitude is 41.915568 and Min Latitude is 40.915568
 
-                        line_text2 = line[11]
-                        line_text2 = line_text2 [0:5]
-                        
-                        if line_text2 in mhist1_inside_Boundingbox.keys():
 
-                               mhist1_inside_Boundingbox[line_text2] += 1
-                        else:
-                               mhist1_inside_Boundingbox[line_text2] = 
+### From tables below, the number of longitude and latitude packup points inside the bounding box is much than the number of longitude and latitude points  out side the bounding box so I can ignore the band outside the bounding box and get the maximum and minimum longitude/latitude from the bounding box of NYC.
+
+
+|Pickup Longitude points|Total 5 max numbers inside Boundnig Box of NYC|
+| ------------- | --------------------- |
+| -73.98  |3567237 |
+| -73.97 |2576599 |
+| -73.99  |2503233|
+| -74.00 |1581119|
+| -73.96|1549802|
+
+|Pickup Longitude points|Total 5 max numbers outside Boundnig Box of NYC|
+| ------------- | --------------------- |
+| -73.66  | 135|
+| -73.68| 98 |
+| -73.65  |93 |
+| -73.69| 87|
+| -73.64|68|
+
+List_max_values_longitude_pickup_band = {'': , '': , '': , '': , '': }
+
+|Pickup Latitude point|Total 5 max numbers inside Boundnig Box of NYC|
+| ------------- | --------------------- |
+|  40.75  |2637136 |
+|  40.76| 2448920 |
+|  40.74  | 2106817|
+|  40.77| 1699229|
+|  40.73|1561073|
+
+|Pickup Latitude point|Total 5 max numbers outside Boundnig Box of NYC|
+| ------------- | --------------------- |
+| 41.45   | 278|
+| 40.93 | 126 |
+| 40.92   |122 |
+| 40.94|81 |
+|40.91|69|
+
+```
+List_max_values_longitude_pickup = dict (sorted(mhist_inside_Boundingbox.items(), key=operator.itemgetter(1), reverse=True)[:5])
 
 ```
 
-### The number points of pickup latitude out of bounding box of NYC for 14776614 pickup latitude are few whether it is compared to the number of points inside the bounding box 
-
-```
-
-      # {'41.34': 6, '41.02': 58, '41.06': 66, '41.25': 6, '41.07': 20, '41.45': 278, '41.28': 3, '41.01': 40, '41.10': 18,
-      # '41.20': 9, '41.04': 48, '40.97': 46, '40.96': 52, '41.08': 11, '41.16': 10, '40.98': 55, '40.94': 81, '41.05': 41,
-      # '41.65': 3, '40.93': 126, '41.03': 51, '40.92': 122, '41.22': 4, '41.18': 8, '41.09': 12, '40.95': 53, '41.11': 17,
-      # '41.21': 13, '41.17': 5, '40.99': 32, '40.91': 69, '41.12': 10, '41.24': 3, '41.15': 12, '41.23': 12, '41.44': 3,
-      # '41.71': 1, '41.54': 3, '41.00': 32, '41.58': 6, '41.46': 4, '41.50': 2, '41.29': 4, '41.27': 1, '41.73': 1, '41.14': 8,
-      # '41.37': 2, '41.53': 2, '41.40': 4, '41.79': 3, '41': 1, '41.56': 3, '41.31': 8, '41.13': 7, '41.66': 1, '41.72': 1,
-      # '41.67': 1, '41.69': 2, '41.5': 2, '41.39': 1, '41.51': 3, '41.26': 7, '41.38': 3, '41.30': 1, '41.32': 3, '41.19': 2,
-      # '41.62': 1, '41.74': 2, '41.83': 1, '41.70': 2, '41.49': 1, '41.41': 3, '41.61': 1, '41.36': 4, '41.59': 1, '41.78': 1,
-      # '41.60': 1, '41.42': 1, '41.48': 1, '41.55': 1, '41.43': 2, '41.90': 5, '41.81': 2, '41.77': 1}
-
-            if line[11] != "" and float(line[11]) >= float (40.915568) and float(line[11])<= float(41.915568):
-
-                        line_text3 = line[11]
-                        line_text3 = line_text3 [0:5]
-
-                        if line_text3 in mhist1_outside_Boundingbox.keys():
-
-                               mhist1_outside_Boundingbox[line_text3] += 1
-                        else:
-                               mhist1_outside_Boundingbox[line_text3] = 1
-
-
-```
 
 <br>
 

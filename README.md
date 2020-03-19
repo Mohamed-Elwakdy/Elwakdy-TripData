@@ -436,60 +436,22 @@ List_max_values_longitude_pickup = dict (sorted(mhist_inside_Boundingbox.items()
 
 <br>
 
-### In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license, rate_code, passenger_count, trip_time_in_secs and trip_distance are getting on. 
+### In this code, the distinct values of some fields suchas pickup_datetime, dropoff_datetime, medallion, hack_license,vendor_id, rate_code,store_and_fwd_flag, passenger_count, trip_time_in_secs and trip_distance are getting on. 
 
-### I used a dictionary to get the total number of values for each field. Please run the python code to get the distinct values of other fields. 
+### I used a dictionary to get the total number of values for most fields in the dataset. The most valiable distinct  values of the fields: passenger_account,
+rate_code, store_and_fwd_flag and rate_code .
 
-### For an example of distint values of some fields explained below: 
-
-<br>
-
-### min and max of the rate code and passenger account:
 
 |   Field Name   | Distinct Values |
 | ------------- | --------------------- |
-|   rate_code   | MAX: 14456067, MIN:  1|
-| passenger_count | MAX:  10471701, MIN: |
+|   rate_code   |1,2,4,5,3,6,8,0,210,28,7,9,65,128|
+| passenger_count | 4,1,2,3,5,6,0,208,9,255|
+|vendor_id | CMT, VTS|
+|store_and_fwd_flag|N,Y|
 
 <br>
 
-
-```
-       pickup_datetime = line[5].replace('-',':')
-        pickup_datetime = pickup_datetime.replace(' ',':')
-
-        pickup_datetime = pickup_datetime[0:4] + ':' + pickup_datetime[5:7] + ':' + pickup_datetime[8:10] + pickup_datetime[10:13]+ pickup_datetime[13:16]
-        
-        if pickup_datetime in mhist.keys():
-            
-            mhist[pickup_datetime] += 1  
-             
-        else:
-            
-            mhist[pickup_datetime] = 1
-
-        if 'pick:p_:atetime' in mhist:
-
-            del mhist['pick:p_:atetime']
-
-        ###   
-
-        dropoff_datetime = line[6].replace('-',':')
-        dropoff_datetime = dropoff_datetime.replace(' ',':')
-
-        dropoff_datetime = dropoff_datetime[0:4] + ':' + dropoff_datetime[5:7] + ':' + dropoff_datetime[8:10] + dropoff_datetime[10:13]+ dropoff_datetime[13:16]
-        
-        if dropoff_datetime in mhist1.keys():
-            mhist1[dropoff_datetime] += 1
-
-        else:
-            mhist1[dropoff_datetime] = 1
-            
-        if 'drop:ff:datetime' in mhist1:
-
-            del mhist1['drop:ff:datetime']
-
-       
+```       
         rate_code = line [3]    
 
         if rate_code in mhist4.keys():
@@ -512,6 +474,29 @@ List_max_values_longitude_pickup = dict (sorted(mhist_inside_Boundingbox.items()
         if 'passenger_count' in mhist5:
              del mhist5['passenger_count']
 
+        ###
+        vendor_id = line [2]
+
+        if vendor_id in mhist8.keys():
+             mhist8[vendor_id] += 1
+        else:
+             mhist8[vendor_id] = 1
+
+        if 'vendor_id' in mhist8:
+             del mhist8['vendor_id']
+
+        ###
+
+        store_and_fwd_flag = line [4]
+
+        if store_and_fwd_flag in mhist9.keys():
+             mhist9[store_and_fwd_flag] += 1
+        else:
+             mhist9[store_and_fwd_flag] = 1
+
+        if 'store_and_fwd_flag' in mhist9:
+             del mhist9['store_and_fwd_flag']
+
 
 ```
 
@@ -521,10 +506,50 @@ List_max_values_longitude_pickup = dict (sorted(mhist_inside_Boundingbox.items()
 
 <br>
 
+### The number of passenger should be not greather than 5 and the minimum passanger is "Zero" and this is unlogic because the minimum number of passengers should be not less than 1 and not greather than 5.
+### The maximum number of the passengers in that dataset is 255 and this is unlogic, as the mimimum number of passengers is 0 and this is unlogic too. 
+
+### In this code, I put the maximum number of passengers is 5 and the minimum number of passengers is 1.   
+
+```
+                if int (line[7]) > int (max_passenger):
+                        max_passenger = line [7]
+
+                if int (line[7]) < int (min_passenger):
+                        min_passenger = line [7]
+                        
+                # The maximum number of passengers in a vehicle is 5 and minimum number is 1
+                
+                if line[7] > max_passenger_count and int (line[7]) < 6 :
+                    max_passenger_count = line[7]
+                if line[7] < min_passenger_count and int (line [7]) > 0 and int (line [7]) < 6:
+                    min_passenger_count = line[7]   
+
+```
+
+### The maximum trip_time_in_secs is 10800 seconds and the minimum is 0. The maximum trip time in seconds are "Zero" and this is unlogic because there is no trip for 
+### "Zero" second. So, I put the minimum trip_time_in_secs is "300" seconds which is equivalent to 5 minutes. 
+
+```
+ if int(line[8]) > int(max_trip_time_in_secs):
+                        max_trip_time_in_secs  = line[8]
+            if int(line[8]) < int(min_trip_time_in_secs):
+                        min_trip_time_in_secs  = line[8]
+
+            # Here, I put the minimum trip time in seconds is 5 minutes which equivalent to 300 seconds
+
+            if int(line[8]) < int(min_trip_time_in_secs_put_in_range) and int(line[8]) >= 300:
+                        min_trip_time_in_secs_put_in_range  = line[8]
+
+```
+
+
+
 ### The values of trip_time_in_secs, trip_distance and Rate Code outside the bounding box
 
 |   Field Name   | Max/Min Values |
 | ------------- | --------------------- |
+|passenger_count|MAX: 5, MIN 0|
 | trip_time_in_secs| MAX  10800, Min 0|
 |  trip_distance   |MAX 99.90, Min 0|
 |  Rate Code   |MAX 9 , Min 0|

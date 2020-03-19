@@ -313,9 +313,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 ### Although all the latitude and longitude pickup/dropoff points are valid points, these points are out of the New York city. 
 ### Because of this, I need to create another bounding box includes the maximum and minimum pickup/dropoff longitude and latitude for New York city.
 
-## INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
-## ----------------------------------------------------------------------------------------------------
-
+### INSIDE THE BOUNDING BOX (MAX AND MINIMUM LONGITUDE) - COMPUTER THE POINTS NUMBER OF PICKUP LONGITUDE 
 
 ### The max longitude and latitude for NYCis: 
 

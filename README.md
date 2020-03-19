@@ -362,6 +362,9 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 
 ```
+### Here, I can see the maximim and minimum longitude/latitude points are close to the area of NYC, but still we need to reduce the size a bounding box to make it to take some other longitude and latitude points out of the Region of Interest. 
+### Also, I can see the values of pickup maximum longitude/latitude points are very close to the values of dropoff maximum and minimum longitude/latitude points which means once we reduce the size of the bounding box the longitude and latitude points (pickup and dropoff points) become very close to each other.     
+### If I go and reduce the size of bounding box more and more, the longitude and latitude points (pickup and dropoff points) will be very close to each other more and more. 
 
 ### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map (inside the bounding box of NYC)
 ![Image of screencapture](images/Map5-MaxLongMinLatPickup-ROI.jpg)
@@ -439,7 +442,6 @@ List_max_values_longitude_pickup_band = {'': , '': , '': , '': , '': }
 List_max_values_longitude_pickup = dict (sorted(mhist_inside_Boundingbox.items(), key=operator.itemgetter(1), reverse=True)[:5])
 
 ```
-
 
 <br>
 

@@ -21,8 +21,8 @@
 
 <br>
 
-### Here, I will chech all the datatime out before I start work on datatime in "Packup Datetime" and "Dropoff Datetime". 
-### This means that I match format below of %Y_%m_%d %H:%M:%S and see if there is any invalid datetime. 
+### Here, I will check all the datatime out before I start work on datatime in "Packup Datetime" and "Dropoff Datetime".
+### This means that I match format below of %Y_%m_%d %H:%M:%S and see if there is any invalid datetime.
 
 ```
 

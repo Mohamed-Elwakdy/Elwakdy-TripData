@@ -659,6 +659,11 @@ rate_code, store_and_fwd_flag and rate_code .
 
 ```
 
+### The plots of The average of passengers per day - Puckup and dropoff are very similar to each other. 
+### The plots of The average of passengers per day for each Thousands row - pickup and dropoff are very similar to each other. 
+### This means that there is no change in the avarage of passengers evern if we select (pickup) a row for every thousand row between the two plots. 
+ 
+
 ### The average of passengers per day (Puckup)
 
 ![Image of screencapture](images/NEWPickupAVGAgainstDay.jpg)

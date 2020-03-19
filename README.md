@@ -298,16 +298,16 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 
 ![Image of screencapture](images/Map1-MaxLongMinLatPickup.jpg)
-#### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
+#### Figure1 Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
 
 ![Image of screencapture](images/Map2-MaxLatMinLongPickup.jpg)
-#### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map
+#### Figure2 Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map
 
 ![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
-#### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
+#### Figure3 Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
 
 ![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
-#### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
+#### Figure4 Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
 
 ### Although all the latitude and longitude pickup/dropoff points are valid points, these points are out of the New York city. 
 ### Because of this, I need to create another bounding box includes the maximum and minimum pickup/dropoff longitude and latitude for New York city.
@@ -370,16 +370,16 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 
 ![Image of screencapture](images/Map5-MaxLongMinLatPickup-ROI.jpg)
-#### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map (inside the bounding box of NYC)
+#### Figure5 Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map (inside the bounding box of NYC)
 
 ![Image of screencapture](images/Map6-MaxLatMinLongDropoff.jpg)
-#### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map (inside the bounding box of NYC)
+#### Figure6 Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map (inside the bounding box of NYC)
 
 ![Image of screencapture](images/Map7-MaxLongMinLatDropoffROI.jpg)
-#### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map (inside the bounding box of NYC)
+#### Figure7 Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map (inside the bounding box of NYC)
 
 ![Image of screencapture](images/Map8-MaxLatMinLongDropoffROI.jpg)
-#### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map (inside the bounding box of NYC)
+#### Figure8 Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map (inside the bounding box of NYC)
 
 
 ### When I take a band outside the bounding box, the numnber of longitude pickup points is really small if it is compared to the number of pickup longitude points inside the bounding box.
@@ -665,10 +665,10 @@ rate_code, store_and_fwd_flag and rate_code
  
 
 ![Image of screencapture](images/NEWPickupAVGAgainstDay.jpg)
-#### The average of passengers per day (Puckup)
+#### Figure9 The average of passengers per day (Puckup)
 
 ![Image of screencapture](images/DropoffAVGAgainstDay.jpg)
-#### The average of passengers per day (Dropoff)
+#### Figure10 The average of passengers per day (Dropoff)
 
 
 <br>
@@ -679,10 +679,10 @@ rate_code, store_and_fwd_flag and rate_code
 
 
 ![Image of screencapture](images/PickupAVGAgainstDay-ThousandsRow.jpg)
-#### The average of passengers per day - Each Thousands row (Puckup)
+#### Figure11 The average of passengers per day - Each Thousands row (Puckup)
 
 ![Image of screencapture](images/DropoffAVGAgainstDayThousandsRow.jpg)
-#### The average of passengers per day - Each Thousands row (Dropoff)
+#### Figure12 The average of passengers per day - Each Thousands row (Dropoff)
 
 
 

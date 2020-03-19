@@ -543,29 +543,29 @@ rate_code, store_and_fwd_flag and rate_code .
 
 ```
 
+### in trip_distance field, the max trip distance is 99.90 and the minimum trip distance .00 is unlogic number. 
 
+```
+            if line[9] > max_trip_distance:
+                        max_trip_distance = line[9]
 
-### The values of trip_time_in_secs, trip_distance and Rate Code outside the bounding box
+            if line[9] < min_trip_distance :
+                        min_trip_distance = line[9]
+
+            # Here, I put a limit to the mim trip distance to be not less than 2 mile.
+
+            if line[9] < min_trip_distance_put_in_range and float (line[9]) >= 2 :
+                        min_trip_distance_put_in_range = line[9]
+
+```
 
 |   Field Name   | Max/Min Values |
 | ------------- | --------------------- |
-|passenger_count|MAX: 5, MIN 0|
-| trip_time_in_secs| MAX  10800, Min 0|
-|  trip_distance   |MAX 99.90, Min 0|
+|passenger_count|MAX: 5, MIN 1|
+| trip_time_in_secs| MAX  10800, Min 300|
+|  trip_distance   |MAX 99.90, Min 2|
 |  Rate Code   |MAX 9 , Min 0|
 
-
-```
-                min_rate_code = line[3]
-                max_rate_code = line[3]
-
-
-                if line[3] > max_rate_code:
-                        max_rate_code = line[3]
-                if line[3] < min_rate_code:
-                        min_rate_code = line[3]
-
-```
 
 <br>
 
@@ -573,9 +573,7 @@ rate_code, store_and_fwd_flag and rate_code .
 
 <br>
 
-### Pickup Datetime
-
-### The average number of passengers each hour of the day 
+### The average number of passengers per hour (Pickup Datetime)
 
 <br>
 
@@ -599,7 +597,7 @@ rate_code, store_and_fwd_flag and rate_code .
                 mhist12[Hour_datetime] = int(line[7])
 
 
-        # Get one out of every thousand rows (pickup_datetime)
+        # The average number of passengers per day by taking one out of every thousand rows (packup_datetime)
 
         if n % 1000 == 0:
 
@@ -619,9 +617,6 @@ rate_code, store_and_fwd_flag and rate_code .
 ###  The average number of passengers per day (pickup_datetime) 
 
 ``` 
-
-        Avg_Passengers_Day = pickup_datetime[8:10]
-        Avg_Passengers_Day1 = dropoff_datetime[8:10]
       
         if Avg_Passengers_Day in d4.keys():
 
@@ -636,8 +631,24 @@ rate_code, store_and_fwd_flag and rate_code .
         else:
                 mhist16[Avg_Passengers_Day] = int(line[7])
 
+        # The average number of passengers per day by taking one out of every thousand rows (packup_datetime)
+
+        if n % 1000 == 0:
+
+                if Avg_Passengers_Day in d5.keys():
+                        d5[Avg_Passengers_Day] += 1
+                else:
+                        d5[Avg_Passengers_Day] = 1
+
+                if Avg_Passengers_Day in mhist17.keys():
+
+                        mhist17[Avg_Passengers_Day] += int(line[7])
+                else:
+                        mhist17[Avg_Passengers_Day] = int(line[7])
+
 
 ```
+
 ### The average of passengers per hour (Puckup)
 ![Image of screencapture](images/AVGPassengersPickup.JPG)
 

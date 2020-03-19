@@ -276,7 +276,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 | Min Dropoff latitude/Dropoff| -0.56333297 |
 
 ```
-if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
+                if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
 
                      if float(line[10]) > float(max_pickup_longitude_big_bounday):
                             max_pickup_longitude_big_bounday = line[10]
@@ -295,7 +295,17 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 <br>
 
 ### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
+
+
+
+
+
+
+##########################################################################
+
+### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map
 ### 
+
 ![Image of screencapture](images/New-MaxLong-MinLatitudepickup.jpg)
 
 ### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map

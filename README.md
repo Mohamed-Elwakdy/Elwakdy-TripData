@@ -298,6 +298,10 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 ![Image of screencapture](images/Map1-MaxLongMinLatPickup.jpg)
 
+### Plot Min Pickup Longitude/Pickup against Max latitude/Pickup on a map
+![Image of screencapture](images/Map2-MaxLatMinLongPickup.jpg)
+
+
 
 
 

@@ -1,3 +1,8 @@
+
+#Documentation:
+#https://github.com/Mohamed-Elwakdy/Elwakdy-TripData
+
+#################
 import csv
 import time
 import datetime
@@ -6,7 +11,7 @@ import operator
 
 tokens= []
 
-fn = 'C:/Users/elwakdmf/Desktop/trip_data_1.csv'
+fn = 'trip_data_1.csv'
 
 f = open(fn,"r")
 reader = csv.reader(f)
@@ -715,9 +720,7 @@ for line in reader:
                         else:
                                mhist_inside_Boundingbox[line_text] = 1
 
-
                 # The number points of pickup longitude out of bounding box of NYC for 14776614 pickup longitude.
-                
                 # The number of points in this band is really small if it is compared to the points number of pickup longitude inside
                 # the bounding box.
 
@@ -758,7 +761,7 @@ for line in reader:
                                mhist1_inside_Boundingbox[line_text2] += 1
                         else:
                                mhist1_inside_Boundingbox[line_text2] = 1
-                               
+                
 
                 if line[11] != "" and float(line[11]) >= float (40.915568) and float(line[11])<= float(41.915568):
 
@@ -779,8 +782,7 @@ for line in reader:
                 #-----------------------------------------------------------------------------------------------------
 
                 # The "mhist2_inside_Boundingbox" containes on a many dropp off longitude points inside the box compared the longitude points outside the
-                # bounding box
-                
+                # bounding box                
                 
                 if line[12] != "" and float(line[12]) >= float (-74.257159) and float(line[12])<= float(-73.699215): 
 
@@ -799,7 +801,7 @@ for line in reader:
                                mhist2_inside_Boundingbox[line_text4] = 1
 
 
-                if line[12] != "" and float(line[12]) >= float (-73.699215) and float(line[12])<= float(-72.699215):
+            if line[12] != "" and float(line[12]) >= float (-73.699215) and float(line[12])<= float(-72.699215):
 
                         line_text5 = line[12]
                         line_text5 = line_text5[0:6]
@@ -822,7 +824,7 @@ for line in reader:
                 # bounding box.
                 
                 
-                if line[13] != "" and float(line[13]) >= float (40.495992) and float(line[13])<= float(40.915568):
+            if line[13] != "" and float(line[13]) >= float (40.495992) and float(line[13])<= float(40.915568):
 
                         if float(line[13]) > float(max_dropoff_latitude_bounding):
                             max_dropoff_latitude_bounding = line[13]
@@ -836,13 +838,13 @@ for line in reader:
 
                                mhist3_inside_Boundingbox[line_text6] += 1
                         else:
-                               mhist3_inside_Boundingbox[line_text6] = 1               
+                               mhist3_inside_Boundingbox[line_text6] = 1
                
-                if line[13] != "" and float(line[13]) >= float (40.915568) and float(line[13])<= float(41.915568):
+               
+            if line[13] != "" and float(line[13]) >= float (40.915568) and float(line[13])<= float(41.915568):
 
                         line_text7 = line[13]
                         line_text7 = line_text7 [0:5]
-                         
                         if line_text7 in mhist3_outside_Boundingbox.keys():
 
                                mhist3_outside_Boundingbox[line_text7] += 1
@@ -852,24 +854,23 @@ for line in reader:
                         
                 ####
                                
-                if line[3] > max_rate_code:
+            if line[3] > max_rate_code:
                         max_rate_code = line[3]
-                if line[3] < min_rate_code:
+            if line[3] < min_rate_code:
                         min_rate_code = line[3]
 
                 #####
-                        
             # The maximum trip time is seconds is 10800 seconds and the minimum is 0. The mimimum trip time in seconds are "Zero" and
             # this is unlogic.  
 
-                if int(line[8]) > int(max_trip_time_in_secs):
+            if int(line[8]) > int(max_trip_time_in_secs):
                         max_trip_time_in_secs  = line[8]
-                if int(line[8]) < int(min_trip_time_in_secs):
+            if int(line[8]) < int(min_trip_time_in_secs):
                         min_trip_time_in_secs  = line[8]
 
             # Here, I put the minimum trip time in seconds is 5 minutes which equivalent to 300 seconds
 
-                if int(line[8]) < int(min_trip_time_in_secs_put_in_range) and int(line[8]) >= 300:
+            if int(line[8]) < int(min_trip_time_in_secs_put_in_range) and int(line[8]) >= 300:
                         min_trip_time_in_secs_put_in_range  = line[8]
 
                 ######
@@ -882,7 +883,7 @@ for line in reader:
             if line[9] < min_trip_distance :
                         min_trip_distance = line[9]
 
-           # Here, I put a limit to the mim trip distance to be not less than 2 mile.
+            # Here, I put a limit to the mim trip distance to be not less than 2 mile.
 
             if line[9] < min_trip_distance_put_in_range and float (line[9]) >= 2 :
                         min_trip_distance_put_in_range = line[9]
@@ -1024,9 +1025,9 @@ for line in reader:
                 else:
                         mhist19[Avg_Passengers_Day1] = int(line[7])
                 
-       # if n > 5000:        
+        #if n > 500000:        
 
-        #    break
+            #break
 
         
 
@@ -1114,7 +1115,7 @@ print ('Number of rows= ' + str(i))
 
 # The Field names
 
-with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
+with open('trip_data_1.csv', 'r') as f:
     d_reader = csv.DictReader(f)
     headers = d_reader.fieldnames
 
@@ -1142,11 +1143,14 @@ print ("List_max_values_longitude_dropoff_band =", List_max_values_longitude_dro
 List_max_values_latitude_dropoff_band = dict (sorted(mhist3_outside_Boundingbox.items(), key=operator.itemgetter(1), reverse=True)[:5])
 print ("List_max_values_latitude_dropoff_band =", List_max_values_latitude_dropoff_band)
 
+
+
+
 print ("Smallest_date_pickup_datetime = ", Smallest_date_pickup_datetime)
 print ("Largest_date_pickup_datetime = ", Largest_date_pickup_datetime)
 print ("Smallest_date_dropoff_datetime = ", Smallest_date_dropoff_datetime)
 print ("Largest_date_dropoff_datetime = ", Largest_date_dropoff_datetime)
-      
+        
 print ("d =", d)#hour count
 print ("mhist12 =", mhist12)#sum of passengers in each hour
 print ("chist =", chist)#passengers per hour (average)
@@ -1235,6 +1239,8 @@ print ("mhist2_outside_Boundingbox =", mhist2_outside_Boundingbox)
 print ("mhist3_inside_Boundingbox =", mhist3_inside_Boundingbox)
 print ("mhist3_outside_Boundingbox =", mhist3_outside_Boundingbox)
 
+
+
 ###
 
 print ("max_pickup_longitude_big_bounday =", max_pickup_longitude_big_bounday)
@@ -1252,8 +1258,6 @@ print ("min_dropoff_longitude_big_bounday =", min_dropoff_longitude_big_bounday)
 print ("max_dropoff_latitude_big_bounday =", max_dropoff_latitude_big_bounday)
 print ("min_dropoff_latitude_big_bounday =", min_dropoff_latitude_big_bounday)
 
-###
 
-print ("min_rate_code =", min_rate_code)
-print ("max_rate_code", min_rate_code)
+
 

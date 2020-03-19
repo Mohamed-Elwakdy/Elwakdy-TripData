@@ -364,7 +364,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 ```
 ### Here, I can see the maximim and minimum longitude/latitude points are close to the area of NYC, but still we need to reduce the size a bounding box to make it to take some other longitude and latitude points out of the Region of Interest. 
 ### Also, I can see the values of pickup maximum longitude/latitude points are very close to the values of dropoff maximum and minimum longitude/latitude points which means once we reduce the size of the bounding box the longitude and latitude points (pickup and dropoff points) become very close to each other.     
-### If I go and reduce the size of bounding box more and more, the longitude and latitude points (pickup and dropoff points) will be very close to each other more and more. 
+### If I go and reduce the size of bounding box more and more, the longitude and latitude points (pickup and dropoff points) could be very close to each other more and more. 
 
 ### Plot Max Pickup Longitude/Pickup against Min latitude/Pickup on a map (inside the bounding box of NYC)
 ![Image of screencapture](images/Map5-MaxLongMinLatPickup-ROI.jpg)
@@ -663,10 +663,10 @@ rate_code, store_and_fwd_flag and rate_code .
 ```
 
 ### The average of passengers per hour (Puckup)
-![Image of screencapture](images/AVGPassengersPickup.JPG)
+![Image of screencapture](images/PickupAVG.jpg)
 
 ### The average of passengers per hour (Droopoff)
-![Image of screencapture](images/Droppoff.jpg)
+![Image of screencapture](images/DroppoffAVG.jpg)
 
 
 <br>
@@ -679,7 +679,7 @@ rate_code, store_and_fwd_flag and rate_code .
 ![Image of screencapture](images/PickupAVGThousands.jpg)
 
 ### The average of passengers per hour - Each Thousands row (Droopoff)
-![Image of screencapture](images/DroppoffAVGThousands.jpg)
+![Image of screencapture](images/Droppoff AVGThousands.jpg)
 
 
 

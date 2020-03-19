@@ -303,15 +303,9 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 ### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
 ![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
 
-
-
-
-
-##########################################################################
-
-### Plot Max Dropoff Longitude/Pickup against Min latitude/Droppoff on a map 
-
 ### Plot Min Dropoff Longitude/Pickup against Max latitude/Droppoff on a map 
+![Image of screencapture](images/Map3-MaxLongMinLatDropoff.jpg)
+
 
 <br>
 

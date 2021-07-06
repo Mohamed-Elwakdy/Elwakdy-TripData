@@ -89,7 +89,7 @@
 
 ### Number of rows= 14776615
 
-```
+```python
 
 for line in reader:
         
@@ -127,7 +127,7 @@ print ('Number of rows= ' + str(i))
 |   dropoff_longitude |The longitude of the point where the taximeter was disengaged|
 | dropoff_latitude |The latitude of the point where the taximeter was disengaged|
 
-```
+```python
 with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
     d_reader = csv.DictReader(f)
     headers = d_reader.fieldnames
@@ -251,7 +251,7 @@ with open('C:/Users/elwakdmf/Desktop/trip_data_1.csv', 'r') as f:
 | Max Dropoff Longitude/Dropoff  |2228.7375|
 | Min Dropoff Longitude/Dropoff| -2350.9556 |
 
-```
+```python
 if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
 
                      if float(line[10]) > float(max_pickup_longitude_big_bounday):
@@ -275,7 +275,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 |  Max Dropoff Latitude/Dropoff   |83.516693 |
 | Min Dropoff latitude/Dropoff| -0.56333297 |
 
-```
+```python
                 if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:                  
 
                      if float(line[10]) > float(max_pickup_longitude_big_bounday):
@@ -344,7 +344,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 ### Compute the number points of pickup longitude inside the bounding box. 
 ### The number of points inside the bounding box for 14776614 pickup longitude is really big number compared to the number of points outside the bounding box:
 
-```                
+```python                
             if line[10] != "" and float(line[10]) >= float (-74.257159) and float(line[10])<= float(-73.699215):
                         if float(line[10]) > float(max_pickup_longitude_bounding):
                             max_pickup_longitude_bounding = line[10]
@@ -384,7 +384,7 @@ if line[10] != "" and float(line[10]) <= 180 and float(line[10])>= -180:
 
 ### When I take a band outside the bounding box, the numnber of longitude pickup points is really small if it is compared to the number of pickup longitude points inside the bounding box.
 
-```
+```python
 if line[10] != "" and float(line[10]) >= float (-73.699215) and float(line[10])<= float(-72.699215):
 
                         line_text1 = line[10]
@@ -439,7 +439,7 @@ if line[10] != "" and float(line[10]) >= float (-73.699215) and float(line[10])<
 | 40.94|81 |
 |40.91|69|
 
-```
+```python
 List_max_values_longitude_pickup = dict (sorted(mhist_inside_Boundingbox.items(), key=operator.itemgetter(1), reverse=True)[:5])
 
 ```
@@ -465,7 +465,7 @@ rate_code, store_and_fwd_flag and rate_code
 
 <br>
 
-```       
+```python       
         rate_code = line [3]    
 
         if rate_code in mhist4.keys():
@@ -524,7 +524,7 @@ rate_code, store_and_fwd_flag and rate_code
 ### The maximum number of the passengers in that dataset is 255 and this is unlogic, as the mimimum number of passengers is 0 and this is unlogic as well.
 ### In this code, I put the maximum number of passengers is 5 and the minimum number of passengers is 1.   
 
-```
+```python
                 if int (line[7]) > int (max_passenger):
                         max_passenger = line [7]
 
@@ -543,7 +543,7 @@ rate_code, store_and_fwd_flag and rate_code
 ### The maximum trip_time_in_secs is 10800 seconds and the minimum is 0. The maximum trip time in seconds are "Zero" and this is unlogic because there is no trip for 
 ### "Zero" second. So, I put the minimum trip_time_in_secs is "300" seconds which is equivalent to 5 minutes. 
 
-```
+```python
             if int(line[8]) > int(max_trip_time_in_secs):
                         max_trip_time_in_secs  = line[8]
             if int(line[8]) < int(min_trip_time_in_secs):
@@ -558,7 +558,7 @@ rate_code, store_and_fwd_flag and rate_code
 
 ### In trip_distance field, the max trip distance is 99.90 and the minimum trip distance .00 is unlogic number. 
 
-```
+```python
             if line[9] > max_trip_distance:
                         max_trip_distance = line[9]
 
@@ -590,7 +590,7 @@ rate_code, store_and_fwd_flag and rate_code
 
 <br>
 
-```
+```python
       
         if Hour_datetime in d.keys():
 
@@ -626,7 +626,7 @@ rate_code, store_and_fwd_flag and rate_code
 
 ###  The average number of passengers per day (pickup_datetime) 
 
-``` 
+```python 
       
         if Avg_Passengers_Day in d4.keys():
 
